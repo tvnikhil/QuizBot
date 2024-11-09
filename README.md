@@ -15,7 +15,6 @@ The system architecture is based on a modular design that includes the following
 - **Vector Database (Faiss)**: Stores embeddings for fast retrieval.
 - **Knowledge Base**: A collection of network security lecture slides converted to text.
 
-![System Architecture]
 1.Data Processing Layer
   Text Extraction: Convert course slides to text with PyMuPDF.
   Embedding Generation: Use Transformers (BERT-case) from Hugging Face to convert text into vector embeddings.
