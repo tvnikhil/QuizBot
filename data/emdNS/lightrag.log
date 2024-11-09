@@ -1,0 +1,332 @@
+2024-11-08 18:43:09,240 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 18:43:09,241 - lightrag - INFO - Load KV full_docs with 0 data
+2024-11-08 18:43:09,241 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-11-08 18:43:09,241 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-11-08 18:43:09,242 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-11-08 18:43:09,433 - lightrag - INFO - [New Chunks] inserting 15 chunks
+2024-11-08 18:43:09,433 - lightrag - INFO - Inserting 15 vectors to chunks
+2024-11-08 18:43:13,528 - lightrag - INFO - [Entity Extraction]...
+2024-11-08 18:51:59,596 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-11-08 18:54:46,211 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 18:54:46,212 - lightrag - INFO - Load KV full_docs with 0 data
+2024-11-08 18:54:46,212 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-11-08 18:54:46,212 - lightrag - INFO - Load KV llm_response_cache with 10 data
+2024-11-08 18:54:46,213 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-11-08 18:54:46,214 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-11-08 18:54:46,405 - lightrag - INFO - [New Chunks] inserting 15 chunks
+2024-11-08 18:54:46,406 - lightrag - INFO - Inserting 15 vectors to chunks
+2024-11-08 18:54:50,250 - lightrag - INFO - [Entity Extraction]...
+2024-11-08 19:04:51,982 - lightrag - INFO - Inserting 9 vectors to entities
+2024-11-08 19:04:52,734 - lightrag - INFO - Inserting 14 vectors to relationships
+2024-11-08 19:04:53,151 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 19:04:55,730 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 19:13:14,907 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 19:13:14,908 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 19:13:14,909 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 19:13:14,909 - lightrag - INFO - Load KV llm_response_cache with 32 data
+2024-11-08 19:13:14,910 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 19:13:14,913 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 19:13:14,915 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 19:13:15,549 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 19:13:54,955 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 19:13:54,956 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 19:13:54,957 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 19:13:54,957 - lightrag - INFO - Load KV llm_response_cache with 33 data
+2024-11-08 19:13:54,958 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 19:13:54,960 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 19:13:54,963 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 19:14:28,718 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 19:14:28,745 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 19:17:18,003 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 19:17:18,003 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 19:17:18,004 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 19:17:18,005 - lightrag - INFO - Load KV llm_response_cache with 35 data
+2024-11-08 19:17:18,006 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 19:17:18,008 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 19:17:18,010 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 19:17:18,289 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 19:18:34,652 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS
+2024-11-08 19:18:34,653 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 19:18:34,654 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 19:18:34,655 - lightrag - INFO - Load KV llm_response_cache with 36 data
+2024-11-08 19:18:34,656 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 19:18:34,658 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 19:18:34,662 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 19:18:48,302 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 19:18:48,335 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:18:07,026 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:18:07,026 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:18:07,027 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:18:07,028 - lightrag - INFO - Load KV llm_response_cache with 38 data
+2024-11-08 21:18:07,029 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:19:03,788 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:19:03,789 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:19:03,789 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:19:03,790 - lightrag - INFO - Load KV llm_response_cache with 38 data
+2024-11-08 21:19:03,791 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:19:03,793 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:19:03,796 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:19:08,366 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:21:26,847 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:21:26,847 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:21:26,848 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:21:26,848 - lightrag - INFO - Load KV llm_response_cache with 41 data
+2024-11-08 21:21:26,849 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:21:26,851 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:21:26,853 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:21:43,352 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:21:43,352 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:21:43,353 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:21:43,353 - lightrag - INFO - Load KV llm_response_cache with 41 data
+2024-11-08 21:21:43,354 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:21:43,356 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:21:43,358 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:22:53,516 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:22:53,517 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:22:53,517 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:22:53,518 - lightrag - INFO - Load KV llm_response_cache with 41 data
+2024-11-08 21:22:53,519 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:22:53,521 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:22:53,524 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:22:59,234 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:23:47,942 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:23:47,943 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:23:47,944 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:23:47,944 - lightrag - INFO - Load KV llm_response_cache with 43 data
+2024-11-08 21:23:47,945 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:23:47,948 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:23:47,950 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:23:48,225 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:23:48,253 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:24:43,537 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:32:50,768 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:32:50,768 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:32:50,768 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:32:50,769 - lightrag - INFO - Load KV llm_response_cache with 45 data
+2024-11-08 21:32:50,770 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:32:50,771 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:32:50,774 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:32:51,331 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:32:51,364 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:36:06,669 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:36:06,670 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:36:06,670 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:36:06,671 - lightrag - INFO - Load KV llm_response_cache with 46 data
+2024-11-08 21:36:06,672 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:36:06,674 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:36:06,677 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:36:06,962 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:36:06,996 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:38:55,128 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:38:55,128 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:38:55,128 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:38:55,129 - lightrag - INFO - Load KV llm_response_cache with 47 data
+2024-11-08 21:38:55,130 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:38:55,131 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:38:55,134 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:38:55,421 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:38:55,450 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:41:24,502 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:41:24,502 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:41:24,502 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:41:24,503 - lightrag - INFO - Load KV llm_response_cache with 48 data
+2024-11-08 21:41:24,504 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:41:24,506 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:41:24,508 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:41:24,779 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:41:24,813 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:41:43,991 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:41:43,992 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:41:43,992 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:41:43,993 - lightrag - INFO - Load KV llm_response_cache with 48 data
+2024-11-08 21:41:43,994 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:41:43,995 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:41:43,998 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:43:13,494 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:43:13,495 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:43:13,495 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:43:13,496 - lightrag - INFO - Load KV llm_response_cache with 49 data
+2024-11-08 21:43:13,497 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:43:13,499 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:43:13,501 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:43:27,073 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:43:27,073 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:43:27,073 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:43:27,074 - lightrag - INFO - Load KV llm_response_cache with 49 data
+2024-11-08 21:43:27,075 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:43:27,076 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:43:27,079 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:43:54,114 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:43:54,115 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:43:54,115 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:43:54,116 - lightrag - INFO - Load KV llm_response_cache with 49 data
+2024-11-08 21:43:54,116 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:43:54,118 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:43:54,120 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:43:57,980 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:45:49,749 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:45:49,750 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:45:49,750 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:45:49,751 - lightrag - INFO - Load KV llm_response_cache with 51 data
+2024-11-08 21:45:49,751 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:45:49,753 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:45:49,756 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:45:50,036 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 21:45:50,065 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 21:52:01,262 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:52:01,262 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:52:01,263 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:52:01,264 - lightrag - INFO - Load KV llm_response_cache with 52 data
+2024-11-08 21:52:01,265 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:52:01,266 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:52:01,269 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 21:59:04,744 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 21:59:04,744 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 21:59:04,745 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 21:59:04,746 - lightrag - INFO - Load KV llm_response_cache with 54 data
+2024-11-08 21:59:04,747 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 21:59:04,748 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 21:59:04,751 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:00:28,046 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:00:28,047 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:00:28,047 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:00:28,048 - lightrag - INFO - Load KV llm_response_cache with 56 data
+2024-11-08 22:00:28,049 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:00:28,051 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:00:28,054 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:00:56,091 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:00:56,091 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:00:56,092 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:00:56,093 - lightrag - INFO - Load KV llm_response_cache with 56 data
+2024-11-08 22:00:56,094 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:00:56,096 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:00:56,098 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:01:16,499 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 22:01:16,539 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 22:02:23,414 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:02:23,415 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:02:23,415 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:02:23,416 - lightrag - INFO - Load KV llm_response_cache with 60 data
+2024-11-08 22:02:23,417 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:02:23,420 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:02:23,423 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:02:23,715 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 22:03:19,627 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:03:19,628 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:03:19,628 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:03:19,629 - lightrag - INFO - Load KV llm_response_cache with 61 data
+2024-11-08 22:03:19,631 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:03:19,633 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:03:19,639 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:03:31,297 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:03:31,297 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:03:31,298 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:03:31,299 - lightrag - INFO - Load KV llm_response_cache with 61 data
+2024-11-08 22:03:31,299 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:03:31,301 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:03:31,304 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:04:13,841 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:04:13,842 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:04:13,842 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:04:13,843 - lightrag - INFO - Load KV llm_response_cache with 61 data
+2024-11-08 22:04:13,844 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:04:13,845 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:04:13,848 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:08:42,513 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:08:42,513 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:08:42,514 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:08:42,514 - lightrag - INFO - Load KV llm_response_cache with 61 data
+2024-11-08 22:08:42,515 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:08:42,517 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:08:42,519 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:09:41,179 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:09:41,180 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:09:41,181 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:09:41,181 - lightrag - INFO - Load KV llm_response_cache with 62 data
+2024-11-08 22:09:41,183 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:09:41,185 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:09:41,187 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:09:49,565 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:09:49,566 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:09:49,566 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:09:49,567 - lightrag - INFO - Load KV llm_response_cache with 62 data
+2024-11-08 22:09:49,568 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:09:49,569 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:09:49,572 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:16:00,691 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:16:00,691 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:16:00,692 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:16:00,693 - lightrag - INFO - Load KV llm_response_cache with 62 data
+2024-11-08 22:16:00,694 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:16:00,695 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:16:00,698 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:16:52,826 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units
+2024-11-08 22:23:08,931 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:23:08,932 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:23:08,932 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:23:08,933 - lightrag - INFO - Load KV llm_response_cache with 64 data
+2024-11-08 22:23:08,934 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:23:08,936 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:23:08,938 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:25:40,881 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:25:40,882 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:25:40,883 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:25:40,884 - lightrag - INFO - Load KV llm_response_cache with 64 data
+2024-11-08 22:25:40,885 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:25:40,887 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:25:40,889 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:27:32,053 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:27:32,054 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:27:32,054 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:27:32,055 - lightrag - INFO - Load KV llm_response_cache with 65 data
+2024-11-08 22:27:32,056 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:27:32,057 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:27:32,060 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:28:04,225 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:28:04,226 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:28:04,226 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:28:04,227 - lightrag - INFO - Load KV llm_response_cache with 65 data
+2024-11-08 22:28:04,228 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:28:04,229 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:28:04,232 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:29:11,124 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:29:11,125 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:29:11,125 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:29:11,126 - lightrag - INFO - Load KV llm_response_cache with 65 data
+2024-11-08 22:29:11,127 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:29:11,128 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:29:11,131 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:29:11,905 - lightrag - INFO - Truncate 15 to 3 chunks
+2024-11-08 22:31:11,879 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:31:11,880 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:31:11,880 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:31:11,881 - lightrag - INFO - Load KV llm_response_cache with 66 data
+2024-11-08 22:31:11,882 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:31:11,884 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:31:11,887 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:31:12,178 - lightrag - INFO - Truncate 15 to 3 chunks
+2024-11-08 22:35:20,349 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:35:20,350 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:35:20,350 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:35:20,351 - lightrag - INFO - Load KV llm_response_cache with 67 data
+2024-11-08 22:35:20,352 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:35:20,354 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:35:20,357 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:35:20,650 - lightrag - INFO - Truncate 15 to 3 chunks
+2024-11-08 22:37:22,572 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:37:22,573 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:37:22,573 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:37:22,574 - lightrag - INFO - Load KV llm_response_cache with 68 data
+2024-11-08 22:37:22,575 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:37:22,577 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:37:22,580 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:37:22,861 - lightrag - INFO - Truncate 15 to 3 chunks
+2024-11-08 22:41:36,348 - lightrag - INFO - Logger initialized for working directory: /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS
+2024-11-08 22:41:36,348 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-08 22:41:36,349 - lightrag - INFO - Load KV text_chunks with 15 data
+2024-11-08 22:41:36,350 - lightrag - INFO - Load KV llm_response_cache with 69 data
+2024-11-08 22:41:36,351 - lightrag - INFO - Loaded graph from /Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/emdNS/graph_chunk_entity_relation.graphml with 16 nodes, 14 edges
+2024-11-08 22:41:36,353 - lightrag - WARNING - All docs are already in the storage
+2024-11-08 22:41:36,356 - lightrag - INFO - Writing graph with 16 nodes, 14 edges
+2024-11-08 22:41:50,240 - lightrag - INFO - Local query uses 9 entites, 10 relations, 3 text units
+2024-11-08 22:41:50,267 - lightrag - INFO - Global query uses 13 entites, 14 relations, 3 text units

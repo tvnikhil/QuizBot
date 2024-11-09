@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d5" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d4" for="edge" attr.name="description" attr.type="string"/>
+<key id="d3" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="&quot;NAME&quot;">
+  <data key="d0">"TYPE"</data>
+  <data key="d1">"description"</data>
+  <data key="d2">chunk-78a737c1d24ce9928bf7ecd37a5c886d</data>
+</node>
+<node id="&quot;ALEX&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Alex is a character who experiences frustration and is observant of the dynamics among other characters."</data>
+  <data key="d2">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4&lt;SEP&gt;chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;TAYLOR&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Taylor is portrayed with authoritarian certainty and shows a moment of reverence towards a device, indicating a change in perspective."</data>
+  <data key="d2">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4&lt;SEP&gt;chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;JORDAN&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Jordan shares a commitment to discovery and has a significant interaction with Taylor regarding a device."</data>
+  <data key="d2">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4&lt;SEP&gt;chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;CRUZ &quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Cruz is associated with a vision of control and order, influencing the dynamics among other characters."</data>
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;WASHINGTON &quot;">
+  <data key="d0">"LOCATION"</data>
+  <data key="d1">"Washington is a location where communications are being received, indicating its importance in the decision-making process."</data>
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;JORDAN &quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Jordan shares a commitment to discovery and has a significant interaction with Taylor regarding a device."</data>
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</node>
+<node id="&quot;CRUZ&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Cruz is associated with a vision of control and order, influencing the dynamics among other characters."</data>
+  <data key="d2">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</node>
+<node id="&quot;THE DEVICE&quot;">
+  <data key="d0">"TECHNOLOGY"</data>
+  <data key="d1">"The Device is central to the story, with potential game-changing implications, and is revered by Taylor."</data>
+  <data key="d2">chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</node>
+<node id="&quot;SOURCE_ENTITY&quot;">
+  <data key="d2">chunk-78a737c1d24ce9928bf7ecd37a5c886d</data>
+  <data key="d1">"description"</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;TARGET_ENTITY&quot;">
+  <data key="d2">chunk-78a737c1d24ce9928bf7ecd37a5c886d</data>
+  <data key="d1">"description"</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;ALEX &quot;">
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+  <data key="d1">"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device."</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;TAYLOR &quot;">
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+  <data key="d1">"Taylor and Jordan interact directly regarding the device, leading to a moment of mutual respect and an uneasy truce."</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;THE DEVICE &quot;">
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+  <data key="d1">"Taylor shows reverence towards the device, indicating its importance and potential impact."</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;FIRST CONTACT&quot;">
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+  <data key="d1">"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order.</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<node id="&quot;INTELLIGENCE&quot;">
+  <data key="d2">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+  <data key="d1">"Taylor shows reverence towards the unknown intelligence, indicating its importance and potential impact."</data>
+  <data key="d0">"UNKNOWN"</data>
+</node>
+<edge source="&quot;ALEX&quot;" target="&quot;TAYLOR&quot;">
+  <data key="d3">7.0</data>
+  <data key="d4">"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device."</data>
+  <data key="d5">"power dynamics, perspective shift"</data>
+  <data key="d6">chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</edge>
+<edge source="&quot;ALEX&quot;" target="&quot;JORDAN&quot;">
+  <data key="d3">24.0</data>
+  <data key="d4">"Alex and Jordan share a commitment to discovery, which contrasts with Cruz's vision.&lt;SEP&gt;"Alex and Jordan share a commitment to discovery, which contrasts with Cruz's vision."</data>
+  <data key="d5">"shared goals, rebellion"</data>
+  <data key="d6">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</edge>
+<edge source="&quot;TAYLOR&quot;" target="&quot;ALEX &quot;">
+  <data key="d3">14.0</data>
+  <data key="d4">"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device."</data>
+  <data key="d5">"power dynamics, perspective shift"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;TAYLOR&quot;" target="&quot;JORDAN&quot;">
+  <data key="d3">32.0</data>
+  <data key="d4">"Taylor and Jordan interact directly regarding the device, leading to a moment of mutual respect and an uneasy truce."</data>
+  <data key="d5">"conflict resolution, mutual respect"</data>
+  <data key="d6">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</edge>
+<edge source="&quot;TAYLOR&quot;" target="&quot;THE DEVICE&quot;">
+  <data key="d3">36.0</data>
+  <data key="d4">"Taylor shows reverence towards the device, indicating its importance and potential impact."</data>
+  <data key="d5">"reverence, technological significance"</data>
+  <data key="d6">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</edge>
+<edge source="&quot;JORDAN&quot;" target="&quot;ALEX &quot;">
+  <data key="d3">12.0</data>
+  <data key="d4">"Alex and Jordan share a commitment to discovery, which contrasts with Cruz's vision.</data>
+  <data key="d5">"shared goals, rebellion"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;JORDAN&quot;" target="&quot;TAYLOR &quot;">
+  <data key="d3">16.0</data>
+  <data key="d4">"Taylor and Jordan interact directly regarding the device, leading to a moment of mutual respect and an uneasy truce."</data>
+  <data key="d5">"conflict resolution, mutual respect"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;JORDAN&quot;" target="&quot;CRUZ&quot;">
+  <data key="d3">20.0</data>
+  <data key="d4">"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order.&lt;SEP&gt;"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order."</data>
+  <data key="d5">"ideological conflict, rebellion"</data>
+  <data key="d6">chunk-bfecccc5e9fe10287ed4f436521ec522&lt;SEP&gt;chunk-6506e5e6caf49ce92f0eb67efad106b4</data>
+</edge>
+<edge source="&quot;JORDAN &quot;" target="&quot;CRUZ&quot;">
+  <data key="d3">10.0</data>
+  <data key="d4">"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order.</data>
+  <data key="d5">"ideological conflict, rebellion"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;JORDAN &quot;" target="&quot;FIRST CONTACT&quot;">
+  <data key="d3">5.0</data>
+  <data key="d4">"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order.</data>
+  <data key="d5">"ideological conflict, rebellion"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;SOURCE_ENTITY&quot;" target="&quot;TARGET_ENTITY&quot;">
+  <data key="d3">1.0</data>
+  <data key="d4">"description"</data>
+  <data key="d5">"strength"</data>
+  <data key="d6">chunk-78a737c1d24ce9928bf7ecd37a5c886d</data>
+</edge>
+<edge source="&quot;ALEX &quot;" target="&quot;INTELLIGENCE&quot;">
+  <data key="d3">7.0</data>
+  <data key="d4">"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device.</data>
+  <data key="d5">"power dynamics, perspective shift"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;TAYLOR &quot;" target="&quot;THE DEVICE &quot;">
+  <data key="d3">18.0</data>
+  <data key="d4">"Taylor shows reverence towards the device, indicating its importance and potential impact."</data>
+  <data key="d5">"reverence, technological significance"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+<edge source="&quot;TAYLOR &quot;" target="&quot;INTELLIGENCE&quot;">
+  <data key="d3">10.0</data>
+  <data key="d4">"Taylor shows reverence towards the unknown intelligence, indicating its importance and potential impact."</data>
+  <data key="d5">"reverence, technological significance"</data>
+  <data key="d6">chunk-6befc8b5cdb9c1cf26743c13e58a3dd0</data>
+</edge>
+</graph></graphml>

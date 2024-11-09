@@ -1,0 +1,2285 @@
+Page 1:
+Network Security
+Introduction
+Chapter 1
+
+
+Page 2:
+Learning Objective
+• Introduce the security requirements 
+• confidentiality
+• integrity
+• availability
+• Describe the X.800 security architecture for OSI 
+
+
+Page 3:
+Network Security Requirements
+
+
+Page 4:
+Computer Network Security
+• Definition: The protection afforded to an automated information 
+system in order to attain the application objectives to preserving the 
+integrity, availability, and confidentiality of information system 
+resources (includes hardware, software, firmware, information/data, 
+and telecommunications).  
+- NIST Computer Security Handbook
+
+
+Page 5:
+Confidentiality
+• Data confidentiality: Assures that private or confidential information 
+is not made available or disclosed to unauthorized individuals; 
+• Privacy: Assures that individual's control or influence what 
+information related to them may be collected and stored and by 
+whom and to whom that information may be disclosed
+• i.e., student grade information
+
+
+Page 6:
+Integrity
+• Data integrity: Assures that data (both stored and in transmitted 
+packets) and programs are changed only in a specified and authorized
+manner;
+• System integrity: Assures that a system performs its intended 
+function in an unimpaired manner, free from deliberate or 
+inadvertent unauthorized manipulation of the system
+• i.e., a hospital patient’s allergy information  
+
+
+Page 7:
+Availability
+• Availability: Assures that systems work promptly, and service is not 
+denied to authorized users, ensuring timely and reliable access to and 
+use of information
+• i.e., denial of service attack
+
+
+Page 8:
+Other security requirements
+• Authenticity
+• Accountability
+• tracible data source, 
+• fault isolation
+• intrusion detection and prevention, 
+• recovery and legal action
+• system must keep records of their activities to permit later forensic analysis to 
+trace security breaches or to aid in transaction disputes
+
+
+Page 9:
+Question
+• What security requirements does a blockchain system have achieved? 
+
+
+Page 10:
+A Hyperledger
+
+
+Page 11:
+Project 
+• Task1: OnDemand Professor Q&A Bot 
+•
+Your task is to build a Q&A Bot over private data that answers questions about the network security course using the open-source
+alternatives to ChatGPT that can be run on your local machine. Data privacy can be compromised when sending data over the internet, 
+so it is mandatory to keep it on your local system. 
+•
+Your Q&A Bot should be able to understand user questions and provide appropriate answers from the local database, then the citations 
+should be added (must be accomplished) if the response is from the internet, then the web references should be added. 
+•
+Train your bot using network security lecture slides, network security textbook, and the Internet. 
+•
+By using Wireshark capture data for Step 4's of the LLM workflow shown in Figure 1. Provide detailed explanations of the trace data. 
+Also, Maintain a record of Step 1's prompt and its mapping to the trace data in Step 4's.
+• Task2: Quiz Bot 
+•
+Your task is to build a quiz bot based on a network security course using the open-source alternatives to ChatGPT that can be run on 
+your local machine. Data privacy can be compromised when sending data over the internet, so it is mandatory to keep it on your local 
+system. 
+•
+Two types of questions should be offered by the bot: randomly generated questions and specific topic questions and the answers should 
+be pulled from the network security database. Train your bot using network security quizzes, lecture slides, network security textbook, 
+and the Internet. 
+•
+The quiz must include multiple-choice questions, true/false questions, and open-ended questions. 
+•
+Finally, the bot should be able to provide feedback on the user's answers. 
+
+
+Page 12:
+
+
+Page 13:
+Outline
+• Review
+• OSI Security Architecture
+• Attack model 
+
+
+Page 14:
+OSI Security Architecture
+
+
+Page 15:
+OSI Security Architecture
+• International Telecommunication Union – Telecommunication (ITU-T) 
+recommends X.800
+• Security Architecture for Open Systems Interconnection (OSI)
+• Defines a systematic way of defining and providing security requirements
+• Used by IT managers and vendors in their products
+Security attacks
+Security mechanisms
+Security services
+a process (or a device incorporating such a process) 
+to detect, prevent, or recover from an attack
+enhances the security of the data processing 
+systems and the information transfers, such as 
+policies
+
+
+Page 16:
+Other Security Architectures
+• NIST, Cybersecurity Framework (CSF)
+• https://www.nist.gov/cyberframework
+• VIRTUAL WORKSHOP #2 | February 15, 2023 (9:00 AM – 5:30 PM EST). Discuss 
+potential significant updates to the CSF 
+• https://www.nist.gov/news-events/events/2023/02/journey-nist-cybersecurity-
+framework-csf-20-workshop-2
+• OWASP - Open Web Application Security Project
+• Web application security
+• OWASP Application Security Verification Standard (ASVS) -
+https://owasp.org/www-project-application-security-verification-standard/
+• OWASP Web Security Testing - https://owasp.org/www-project-web-security-testing-
+guide/
+• OWASP foundation
+
+
+Page 17:
+Security attack
+• Definition: any action that compromises the security of information 
+owned by an organization
+• Two types of security attacks
+• Passive attack
+• Active attack
+
+
+Page 18:
+Security attack
+• Definition: any action that compromises the security of information 
+owned by an organization
+• Two types of security attacks
+• Passive attack
+• Active attack
+
+
+Page 19:
+Passive attack
+• i.e. eavesdropping on or monitoring of transmissions
+• Goal: obtain information being transmitted
+• release of message contents
+• traffic analysis – a promiscuous sniffer
+• Very difficult to detect – no alteration of the data
+• But easy to prevent, why?
+
+
+Page 20:
+Active attack
+• active attack includes:
+• replay
+• Modification of messages
+• Denial of service
+• Masquerade
+
+
+Page 21:
+Example: two points communication 
+• Generic types of attacks
+Eavedropping
+
+
+Page 22:
+Example of modification attack in 6LoWPAN
+
+
+Page 23:
+Example: a group of attackers
+
+
+Page 24:
+Know Your Threat Model
+• Threat model: A model of who your attacker is and what resources 
+they have
+• One of the best ways to counter an attacker is to attack their reasons
+
+
+Page 25:
+Example: adversary model
+• “The adversary is assumed to be intelligent and has 
+limited number of resources. Before capturing the 
+nodes, it exploits the various vulnerabilities of the 
+networks. It knows the topology of the network, 
+routing information. It aims to capture the sink node so 
+as to disrupt the whole traffic. If it is not able to 
+capture the sink node, it will capture the nearby nodes 
+of the sink. It tries to disrupt the whole traffic of the 
+network with minimum number of captured nodes. It is 
+also assumed that the adversary tends to attack more 
+on the nodes closer to the data sink than nodes that 
+are far away” 
+
+
+Page 26:
+No class on Wednesday
+• No class on Wednesday (Sept 18, 2024) due to the Job fair. Wish you 
+good luck!
+• Reminder to form a project group by Sept. 9th, 2024
+
+
+Page 27:
+Know Your Threat Model
+• Threat model: A model of who your attacker is and what resources 
+they have
+• One of the best ways to counter an attacker is to attack their reasons
+
+
+Page 28:
+Story…
+• The bear race
+• Takeaway: Even if a 
+defense is not perfect, it 
+is important to always 
+stay on top of best 
+security measures
+I don’t have to outrun the bear. I just have to outrun you
+
+
+Page 29:
+Human Factors
+• The users
+• Users like convenience (ease of use)
+• If a security system is unusable, it will be unused
+• Users will find way to subvert security systems if it makes their lives easier
+• The programmers
+• Programmers make mistakes
+• Programmers use tools that allow them to make mistakes (e.g. C and C++)
+• Everyone else
+• Social engineering attacks exploit other people’s trust and access for personal 
+gain
+
+
+Page 30:
+Design in security from the start
+• When building a new system, include security as part of the design 
+considerations rather than patching it after the fact
+• A lot of systems today were not designed with security from the start, 
+resulting in patches that don’t fully fix the problem!
+• Keep these security principles in mind whenever you write code!
+
+
+Page 31:
+Security Services and Mechanisms
+
+
+Page 32:
+Supplementary materials
+• Internet Security Glossary, v2 – produced by Internet Society (ISOC) 
+https://datatracker.ietf.org/doc/html/rfc4949
+• X.800 – OSI network security
+https://www.itu.int/rec/dologin_pub.asp?lang=f&id=T-REC-X.800-
+199103-I!!PDF-E&type=items
+
+
+Page 33:
+Summary for Chapter 1
+• Have learned:
+• Security requirements
+• Attack models
+• X.800 secure architecture, security services, mechanisms
+
+
+Page 34:
+Review Questions
+• William Stallings (WS), “Network Security 
+Essentials”, 6th Global Edition
+• RQ 1.1 - 1.3
+• Prob 1.5
+
+
+Page 35:
+Symmetric Encryption and Message Confidentiality
+Chapter 2
+
+
+Page 36:
+Model for network security
+
+
+Page 37:
+Model for network security
+• Using this model requires us to:
+• design a suitable algorithm for the security transformation 
+• generate the secret information (keys) used by the algorithm 
+• develop methods to distribute and share the secret information 
+• specify a protocol enabling the principals to use the transformation and 
+secret information for a security service 
+
+
+Page 38:
+Symmetric Encryption Principles
+
+
+Page 39:
+Symmetric encryption
+• Sender and recipient share a common/same key
+• Was the only type of cryptography, prior to invention of public-key in 
+1970’s
+
+
+Page 40:
+Simplified model of symmetric encryption
+
+
+Page 41:
+Symmetric encryption
+• Has five ingredients
+• Plaintext:  the original message or data
+• Encryption algorithm: performs various substitutions and transformations on 
+the plaintext
+• Secret key
+• Ciphertext: the coded message
+• Decryption algorithm: takes the ciphertext and the same secret key and 
+produces the original plaintext
+
+
+Page 42:
+Other basic terminology
+• cipher - algorithm for transforming plaintext to ciphertext 
+• encipher (encrypt) - converting plaintext to ciphertext
+• decipher (decrypt) - recovering plaintext from ciphertext
+• cryptography - study of encryption principles/methods
+• cryptanalysis (codebreaking) - the study of principles/ methods of 
+deciphering ciphertext without knowing key
+
+
+Page 43:
+Requirements
+• Two requirements for secure use of symmetric encryption:
+• a strong encryption algorithm
+• a secret key known only to sender / receiver
+Y = EK(X)
+X = DK(Y)
+• assume encryption algorithm is known
+• the security of symmetric encryption depends on the secrecy of the 
+key
+• implies a secure channel to distribute key
+
+
+Page 44:
+A strong encryption algorithm
+attacker
+encryption algorithm
+plaintext / enquiry
+cyphertext / response
+
+
+Page 45:
+TA & Grader
+• TA Name: Faiyaz, Amir (Project, Review & Quiz) 
+• Email:  afaiyaz@ttu.edu
+• Reminder: Submit the names and emails of your group members to 
+FALL 2024 CS5342 PROJECT GROUP NAMES.xlsx
+• Grader Name: Han, Namgyu (Homework, Quiz, Exam grading)
+• Email: Namgyu.Han@ttu.edu
+
+
+Page 46:
+A strong encryption algorithm
+attacker
+encryption algorithm
+plaintext / enquiry
+cyphertext / response
+
+
+Page 47:
+Secure Encryption Scheme
+• Unconditional security
+• no matter how much computer power is available, the cipher cannot be 
+broken since the ciphertext provides insufficient information to uniquely 
+determine the corresponding plaintext
+• Computational security
+• the cost of breaking the cipher exceeds the value of the encrypted 
+information;
+• or the time required to break the cipher exceeds the useful lifetime of the 
+information
+
+
+Page 48:
+Desired characteristics
+• Cipher needs to completely obscure statistical properties of original 
+message
+• more practically Shannon suggested combining elements to obtain:
+• Confusion – how does changing a bit of the key affect the ciphertext?
+• Diffusion – how does changing one bit of the plaintext affect the ciphertext?
+confusion
+ciphertext
+plaintext
+diffusion
+
+
+Page 49:
+Ways to achieve
+• Symmetric Encryption: 
+• substitution / transposition / hybrid
+• Asymmetric Encryption: 
+• Mathematical hardness - problems that are efficient to compute in one 
+direction, but inefficient to reverse by the attacker
+• Examples: Modular arithmetic, factoring, discrete logarithm problem, Elliptic Logs over 
+Elliptic Curves
+
+
+Page 50:
+Two basic types
+• Block Ciphers 
+• Typically 64, 128 bit blocks
+• A k-bit plaintext block maps to a k-bit ciphertext block 
+• Usually employ Feistel structure 
+• Stream Ciphers
+• A key is used to generate a stream of pseudo-random bits – key stream
+• Just XOR plaintext bits with the key stream for encryption 
+• For decryption generate the key stream and XOR with the ciphertext! 
+
+
+Page 51:
+Symmetric Block Encryption
+
+
+Page 52:
+Block cipher
+• the most commonly used symmetric encryption algorithms
+• input: fixed-size blocks (Typically 64, 128 bit blocks), output: equal 
+size blocks
+• provide secrecy and/or authentication services
+• Data Encryption Standard (DES), triple DES (3DES), and the Advanced 
+Encryption Standard (AES)s
+• Usually employ Feistel structure 
+
+
+Page 53:
+Feistel Cipher Structure
+
+
+Page 54:
+Feistel Cipher Structure
+• most symmetric block ciphers are based on a Feistel Cipher Structure
+• based on the two primitive cryptographic operations
+• substitution (S-box)
+• permutation (P-box)
+• provide confusion and diffusion of message 
+
+
+Page 55:
+Feistel Cipher Structure
+• Horst Feistel devised the feistel cipher in the 1973
+• based on concept of invertible product cipher
+• partitions input block into two halves
+• process through multiple rounds which
+• perform a substitution on left data half
+• based on round function of right half & subkey
+• then have permutation swapping halves
+• implements Shannon’s substitution-permutation network concept
+
+
+Page 56:
+Feistel Encryption and Decryption 
+
+
+Page 57:
+Symmetric Block Encryption
+
+
+Page 58:
+Block cipher
+• the most commonly used symmetric encryption algorithms
+• input: fixed-size blocks (Typically 64, 128 bit blocks), output: equal 
+size blocks
+• provide secrecy and/or authentication services
+• Data Encryption Standard (DES), triple DES (3DES), and the Advanced 
+Encryption Standard (AES)s
+• Usually employ Feistel structure 
+
+
+Page 59:
+Feistel Cipher Structure
+
+
+Page 60:
+Feistel Cipher Structure
+• most symmetric block ciphers are based on a Feistel Cipher Structure
+• based on the two primitive cryptographic operations
+• substitution (S-box)
+• permutation (P-box)
+• provide confusion and diffusion of message 
+
+
+Page 61:
+Feistel Cipher Structure
+• Horst Feistel devised the feistel cipher in the 1973
+• based on concept of invertible product cipher
+• partitions input block into two halves
+• process through multiple rounds which
+• perform a substitution on left data half
+• based on round function of right half & subkey
+• then have permutation swapping halves
+• implements Shannon’s substitution-permutation network concept
+
+
+Page 62:
+Feistel Encryption and Decryption 
+
+
+Page 63:
+
+
+Page 64:
+Feistel Encryption and Decryption 
+
+
+Page 65:
+DES encryption
+•
+64 bits plaintext
+•
+56 bits effective key length
+
+
+Page 66:
+DES Weakness
+• short length key (56 bits) is not secure enough. Brutal force search 
+takes short time. 
+
+
+Page 67:
+Triple DES (3DES)
+Decrypting with the wrong key will further convolute the output
+
+
+Page 68:
+3DES
+• Triple DES with three different keys – brute-force complexity 2168
+• 3DES is the FIPS-approved symmetric encryption algorithm
+• Weakness: slow speed for encryption
+FIPS – Federal Information Processing Standards. The United States' Federal Information Processing Standards are publicly announced 
+standards developed by the National Institute of Standards and Technology for use in computer systems by non-military American government 
+agencies and government contractors
+
+
+Page 69:
+AES
+• clearly a replacement for DES was needed
+• have theoretical attacks that can break it
+• have demonstrated exhaustive key search attacks
+• can use Triple-DES – but slow with small blocks
+• US NIST issued call for ciphers in 1997
+• 15 candidates accepted in Jun 98 
+• 5 were short-listed in Aug-99 
+• Rijndael was selected as the AES in Oct-2000
+• issued as FIPS PUB 197 standard in Nov-2001 
+
+
+Page 70:
+Criteria to evaluate AES
+• General security
+• Software implementations
+• Restricted-space environments
+• Hardware implementations
+• Attacks on implementations
+• Encryption versus decryption
+• Key agility
+• Other versatility and flexibility
+• Potential for instruction-level parallelism
+Cryptographic Standards and Guidelines | CSRC (nist.gov)
+
+
+Page 71:
+AES Specification
+• symmetric block cipher 
+• 128-bit data, 128/192/256-bit keys 
+• stronger & faster than Triple-DES 
+• provide full specification & design details 
+• both C & Java implementations
+• NIST have released all submissions & unclassified analyses
+https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-
+and-Guidelines/documents/aes-development/Rijndael-ammended.pdf
+
+
+Page 72:
+The AES Cipher - Rijndael 
+• an iterative rather than feistel cipher
+• treats data in 4 groups of 4 bytes
+• operates an entire block in every round
+• designed to be:
+• resistant against known-plaintext attacks
+• speed and code compactness on many CPUs
+• design simplicity
+
+
+Page 73:
+Rijndael
+• processes data as 4 groups of 4 bytes (state) = 128 bits
+• has 10/12/14 rounds in which state undergoes: 
+• byte substitution (1 S-box used on every byte) 
+• shift rows (permute bytes row by row) 
+• mix columns (alter each byte in a column as a function of all of the bytes in 
+the column) 
+• add round key (XOR state with key material) 
+• 128-bit keys – 10 rounds, 192-bit keys – 12 rounds, 256-bit keys – 14 
+rounds
+
+
+Page 74:
+AES Specification
+• symmetric block cipher 
+• 128-bit data, 128/192/256-bit keys 
+• stronger & faster than Triple-DES 
+• provide full specification & design details 
+• both C & Java implementations
+• NIST have released all submissions & unclassified analyses
+https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-
+and-Guidelines/documents/aes-development/Rijndael-ammended.pdf
+
+
+Page 75:
+The AES Cipher - Rijndael 
+• an iterative rather than feistel cipher
+• treats data in 4 groups of 4 bytes
+• operates an entire block in every round
+• designed to be:
+• resistant against known-plaintext attacks
+• speed and code compactness on many CPUs
+• design simplicity
+
+
+Page 76:
+Rijndael
+• processes data as 4 groups of 4 bytes (state) = 128 bits
+• has 10/12/14 rounds in which state undergoes: 
+• byte substitution (1 S-box used on every byte) 
+• shift rows (permute bytes row by row) 
+• mix columns (alter each byte in a column as a function of all of the bytes in 
+the column) 
+• add round key (XOR state with key material) 
+• 128-bit keys – 10 rounds, 192-bit keys – 12 rounds, 256-bit keys – 14 
+rounds
+
+
+Page 77:
+AES Encryption and Decryption
+
+
+Page 78:
+AES encryption round
+
+
+Page 79:
+
+
+Page 80:
+AES pros
+• Most operations can be combined into XOR and table lookups - hence 
+very fast & efficient
+
+
+Page 81:
+Take-home Exercises
+• Find an AES API to encrypt a text (A), then decrypt it and check 
+whether the original text (A) equals the decrypted text (B). Whether A 
+= B?
+• Compare the decryption time with different key lengths, and with DES 
+and 3DES. 
+• Suggestions: find a large A file. Run decryption a couple of times and take the 
+average. 
+
+
+Page 82:
+Reading materials
+• FIPS 197, Advanced Encryption Standard (AES) (nist.gov)
+
+
+Page 83:
+WPEC 2024: NIST Workshop on Privacy-
+Enhancing Cryptography
+• Time: September 24–26, 2024
+• Free to register
+• Virtual conference via Zoom
+• https://csrc.nist.gov/events/2024/wpec2024
+
+
+Page 84:
+Random and Pseudorandom Numbers
+
+
+Page 85:
+When to use random numbers?
+• Generation of a stream key for symmetric stream cipher 
+• Generation of keys for public-key algorithms
+• RSA public-key encryption algorithm (described in Chapter 3)
+• Generation of a symmetric key for use as a temporary session key
+• used in a number of networking applications, such as Transport Layer Security 
+(Chapter 5), Wi-Fi (Chapter 6), e-mail security (Chapter 7), and IP security 
+(Chapter 8) 
+• In a number of key distribution scenarios
+• Kerberos (Chapter 4)
+
+
+Page 86:
+Two types of random numbers
+• True random numbers:
+• generated in non-deterministic ways. They are not predictable and repeatable
+• Pseudorandom numbers:
+• appear random, but are obtained in a deterministic, repeatable, and 
+predictable manner
+
+
+Page 87:
+Properties of Random Numbers
+• Randomness
+• Uniformity
+• distribution of bits in the sequence should be uniform 
+• Independence
+• no one subsequence in the sequence can be inferred from the others 
+• Unpredictable
+• satisfies the "next-bit test“
+
+
+Page 88:
+Entropy
+• A measure of uncertainty
+• In other words, a measure of how unpredictable the outcomes are
+• High entropy = unpredictable outcomes = desirable in cryptography
+• The uniform distribution has the highest entropy (every outcome equally 
+likely, e.g. fair coin toss)
+• Usually measured in bits (so 3 bits of entropy = uniform, random distribution 
+over 8 values)
+Entropy of an information source
+
+
+Page 89:
+
+
+Page 90:
+Properties of Random Numbers
+• Randomness
+• Uniformity
+• distribution of bits in the sequence should be uniform 
+• Independence
+• no one subsequence in the sequence can be inferred from the others 
+• Unpredictable
+• satisfies the "next-bit test“
+
+
+Page 91:
+Entropy
+• A measure of uncertainty
+• In other words, a measure of how unpredictable the outcomes are
+• High entropy = unpredictable outcomes = desirable in cryptography
+• The uniform distribution has the highest entropy (every outcome equally 
+likely, e.g. fair coin toss)
+• Usually measured in bits (so 3 bits of entropy = uniform, random distribution 
+over 8 values)
+Entropy of an information source
+
+
+Page 92:
+
+
+Page 93:
+
+
+Page 94:
+True random numbers generators
+• Several sources of randomness – natural sources of randomness
+• decay times of radioactive materials
+• electrical noise from a resistor or semiconductor
+• radio channel or audible noise
+• keyboard timings
+• disk electrical activity
+• mouse movements
+• Physical unclonable function (PUF)
+• Some are better than others
+
+
+Page 95:
+Combining sources of randomness
+• Suppose r1, r2, …, rk are random numbers from different sources. 
+E.g.,
+r1 = electrical noise from a resistor or semiconductor
+r2 = sample of hip-hop music on radio
+r3 = clock on computer
+b = r1⊕r2⊕…⊕rk
+If any one of r1, r2, …, rk is truly random, then so is b
+Many poor sources + 1 good source = good entropy
+
+
+Page 96:
+Pseudorandom Number Generators (PRNGs)
+• True randomness is expensive
+• Pseudorandom number generator (PRNGs): An algorithm that uses a 
+little bit of true randomness to generate a lot of random-looking 
+output
+• Also called deterministic random bit generators (DRBGs)
+• PRNGs are deterministic: Output is generated according to a set 
+algorithm
+• However, for an attacker who can’t see the internal state, the output is 
+computationally indistinguishable from true randomness
+
+
+Page 97:
+Pseudorandom Number Generators (PRNGs)
+• True randomness is expensive
+• Pseudorandom number generator (PRNGs): An algorithm that uses a 
+little bit of true randomness to generate a lot of random-looking 
+output
+• Also called deterministic random bit generators (DRBGs)
+• PRNGs are deterministic: Output is generated according to a set 
+algorithm
+• However, for an attacker who can’t see the internal state, the output is 
+computationally indistinguishable from true randomness
+
+
+Page 98:
+PRNG: Definition
+• A PRNG has two functions:
+• PRNG.Seed(randomness): Initializes the internal state using the entropy
+• Input: Some truly random bits
+• PRNG.Generate(n): Generate n pseudorandom bits
+• Input: A number n
+• Output: n pseudorandom bits
+• Updates the internal state as needed
+• Properties
+• Correctness: Deterministic
+• Efficiency: Efficient to generate pseudorandom bits
+• Security: Indistinguishability from random
+• Rollback resistance: cannot deduce anything about any previously-generated bit
+
+
+Page 99:
+Example construction of PRNG
+• Using block cipher in Counter (CTR) mode:
+• If you want m random bits, and a block cipher with Ek has n bits, apply the 
+block cipher m/n times and concatenate the result:
+• PRNG.Seed(K | IV) = Ek(IV, 1) | Ek(IV, 2) | Ek(IV, 3) … Ek(IV, ceil(m/n)),
+• | is concatenation
+• Initialization vector (IV) / Nonce – typically is random or pseudorandom
+Randomness, 
+PRNG output
+
+
+Page 100:
+PRNG: Security
+• Can we design a PRNG that is truly random?
+• A PRNG cannot be truly random
+• The output is deterministic given the initial seed
+• A secure PRNG is computationally indistinguishable from random to 
+an attacker
+• Game: Present an attacker with a truly random sequence and a sequence 
+outputted from a secure PRNG
+• An attacker should be able to determine which is which with probability ≈0
+• Equivalence: An attacker cannot predict future output of the PRNG
+
+
+Page 101:
+Create pseudorandom numbers
+• Truly random numbers are impossible with any program!
+• However, we can generate seemingly random numbers, called 
+pseudorandom numbers
+• The function rand() returns a non-negative number between 0 and 
+RAND_MAX
+• For C, it is defined in stdlib.h
+• arc4random() is a function available in some operating systems (primarily 
+BSD-based systems like macOS and FreeBSD) that generates random 
+numbers. It is part of the C standard library and provides a more secure 
+and higher-quality source of random numbers compared to rand()
+
+
+Page 102:
+PRNGs: Summary
+• True randomness requires sampling a physical process
+• PRNG: An algorithm that uses a little bit of true randomness to 
+generate a lot of random-looking output
+• Seed(entropy): Initialize internal state
+• Generate(n): Generate n bits of pseudorandom output
+• Security: computationally indistinguishable from truly random bits
+
+
+Page 103:
+Stream Ciphers
+
+
+Page 104:
+Stream Ciphers
+• process the message bit by bit (as a stream) 
+• typically have a (pseudo) random stream key
+• combined (XOR) with plaintext bit by bit 
+• randomness of stream key completely destroys any statistically 
+properties in the message 
+• Ci = Mi XOR StreamKeyi
+• what could be simpler!!!! 
+• but must never reuse stream key
+• otherwise, can remove effect and recover messages, M⨁K⨁K = M
+
+
+Page 105:
+Stream Ciphers
+• process the message bit by bit (as a stream) 
+• typically have a (pseudo) random stream key
+• combined (XOR) with plaintext bit by bit 
+• randomness of stream key completely destroys any statistically 
+properties in the message 
+• Ci = Mi XOR StreamKeyi
+• what could be simpler!!!! 
+• but must never reuse stream key
+• otherwise, can remove effect and recover messages, M⨁K⨁K = M
+
+
+Page 106:
+Stream Cipher Properties
+• some design considerations are:
+• statistically random 
+• depends on large enough key
+• large linear complexity
+• correlation immunity 
+• confusion
+• diffusion
+
+
+Page 107:
+How to generate Stream Key?
+• How to generate Stream Key?
+
+
+Page 108:
+Stream Ciphers 
+• Idea: replace “rand” by “pseudo rand”
+• Use Pseudo Random Number Generator 
+• A secure PRNG produces output that looks indistinguishable from random
+• An attacker who can’t see the internal PRNG state can’t learn any output
+• PRNG: {0,1}s ® {0,1}n
+• expand a short (e.g., 128-bit) random seed into a long (typically unbounded) 
+string that “looks random”
+• Secret key is the seed
+• Basic encryption method: Ekey[M] = M Å PRNG(key)
+
+
+Page 109:
+Stream Ciphers
+• Protocol: Alice and Bob both seed a secure PRNG with their 
+symmetric secret key, and then use the output as the key for stream 
+key
+Alice
+Bob
+Seed(k)
+Seed(k)
+Generate(n)
+Generate(n)
+Plaintext
+Plaintext
+Ciphertext
+⊕
+⊕
+
+
+Page 110:
+Stream Ciphers: Encrypting Multiple Messages
+• How do we encrypt multiple messages without key reuses?
+Alice
+Bob
+Seed(k)
+Seed(k)
+Generate(n)
+Generate(n)
+Plaintext
+Plaintext
+Ciphertext
+⊕
+⊕
+
+
+Page 111:
+Stream Ciphers: Encrypting Multiple Messages
+• Solution: For each message, seed the PRNG with the key and a 
+random IV, concatenated(“|”). Send the IV with the ciphertext
+Alice
+Bob
+Seed(k | IV)
+Seed(k | IV)
+Generate(n)
+Generate(n)
+Plaintext
+Plaintext
+Ciphertext
+⊕
+⊕
+IV
+IV
+
+
+Page 112:
+Real-world example: RC4
+• a proprietary cipher designed in 1987 
+• Extremely simple but effective!
+• Very fast - especially in software
+• Easily adapts to any key length, byte-oriented stream cipher 
+• widely used (web SSL/TLS, wireless WEP, WAP) 
+• A trade secret by RSA Security
+• uses that permutation to scramble input info processed a byte at a 
+time 
+
+
+Page 113:
+RC4 Stream Cipher
+K
+RC4 (K|IV)
+011010010111
+⊕
+M
+C
+key
+(seed)
+key stream
+(pseudo random sequence)
+message
+ciphertext
+
+
+Page 114:
+RC4 Key Schedule
+• starts with an array S of 
+numbers: 0…255
+• use key to well and truly 
+shuffle
+• S forms internal state of 
+the cipher
+• given a key k of length I 
+bytes
+Throw away T & K, retain S
+
+
+Page 115:
+
+
+Page 116:
+RC4 Stream Cipher
+K
+RC4 (K|IV)
+011010010111
+⊕
+M
+C
+key
+(seed)
+key stream
+(pseudo random sequence)
+message
+ciphertext
+
+
+Page 117:
+RC4 Key Schedule
+• starts with an array S of 
+numbers: 0…255
+• use key to well and truly 
+shuffle
+• S forms internal state of 
+the cipher
+• given a key k of length I 
+bytes
+Throw away T & K, retain S
+
+
+Page 118:
+
+
+Page 119:
+RC4 Encryption
+• encryption continues 
+shuffling array values
+• sum of shuffled pair 
+selects "stream key" 
+value
+• XOR with next byte of 
+message to en/decrypt
+
+
+Page 120:
+RC4
+
+
+Page 121:
+RC4 Security
+• claimed secure against known attacks
+• since RC4 is a stream cipher, must never reuse a key
+• have a concern with WEP, but due to key handling rather than RC4 
+itself 
+• RC4 Biases: It is extensively studied, not a completely secure PRNG, 
+first part of output biased, when used as stream cipher, should use 
+RC4-Drop[n]
+• Which drops first n bytes before using the output
+• Conservatively, set n=3072
+
+
+Page 122:
+Summary – Chapter 2
+• Symmetric block cipher
+• DES, 3DES
+• AES
+• Random number
+• true random number
+• pseudorandom number
+• Stream cipher 
+• The security of symmetric encryption depends on the secrecy of the 
+key
+• Symmetric encryption: pros and cons 
+
+
+Page 123:
+Modular Arithmetic
+• Definition (congruent modulo): 
+• given b – a = km for some k 𝜖𝑍, then a ≡𝑏(mod m)
+• Given a ≡𝑏(mod m) and c ≡𝑑(mod m), then
+• a + b ≡c + d (mod m)
+• a - b ≡c - d (mod m)
+• a + c ≡b + d (mod m)
+• a × c ≡b × d (mod m)
+• ak ≡bk (mod m)
+• ka = kb (mod m)
+• p(a) ≡p(b) (mod m), any polynomial p(x) with integer coefficients
+• A ⨁𝐵⨁𝐵= A
+
+
+Page 124:
+Thank you!
+
+
+Page 125:
+Network Security
+Chapter 3
+Public-Key Cryptography and Message Authentication
+
+
+Page 126:
+Public-Key Cryptography
+
+
+Page 127:
+Conventional cryptography
+• traditional private/secret/single-key cryptography uses one key 
+• shared by both sender and receiver 
+• if this key is disclosed, communications are compromised 
+• also is symmetric, parties are equal 
+
+
+Page 128:
+Pros and cons
+• Pros:
+• Encryption is fast for large amounts of data
+• Provide the same level of security with a shorter encryption key
+• By now, it’s unbreakable to quantum computing
+• Cons
+• Key distribution assumes a secure channel
+• Does not protect sender from receiver forging a message & claiming it’s sent 
+by sender
+• It does not scale well for large networks. It requires a separate key for each 
+pair of communicating parties, which can result in a large number of keys to 
+manage and protect. 
+
+
+Page 129:
+Homework 1 - individual
+• Chapter 1 & 2
+• Deadline: Tuesday, October 8, 11:59 PM
+• Submit your homework via the provided link.
+• The Google submission timestamp will be considered final.
+• A 10% penalty will be applied for each day of late submission.
+
+
+Page 130:
+Review & Quiz I
+• Chapter 1 & 2
+• Wednesday (Oct. 9, 2024), in class
+• Please ensure your participation
+• No make-up quiz
+
+
+Page 131:
+Public-Key Cryptography
+• In public-key schemes, each person has two keys
+• Public key: Known to everybody
+• Private key: Only known by that person
+• Keys come in pairs: every public key corresponds to one private key
+• Uses number theory
+• Examples: Modular arithmetic, factoring, discrete logarithm problem, 
+Elliptic logs over Elliptic Curves
+• Contrast with symmetric-key cryptography (uses XORs and bit-shifts)
+• Messages are numbers
+• Contrast with symmetric-key cryptography (messages are bit strings)
+
+
+Page 132:
+Public-key Cryptography
+• Benefit:
+• Drawback:
+• Benefit: No longer need to assume that Alice and Bob already share a 
+secret
+• Drawback: Much slower than symmetric-key cryptography
+• Number theory calculations are much slower than XORs and bit-shifts
+
+
+Page 133:
+Reading materials
+• Encryption: Strengths and Weaknesses of Public-key Cryptography
+• Public-key cryptography is a public invention due to Whitfield Diffie & 
+Martin Hellman at Stanford Uni in 1976
+
+
+Page 134:
+Public-key cryptography
+• public-key/two-key/asymmetric cryptography involves the use of 
+two keys: 
+• a public-key, which may be known by anybody, and can be used to encrypt 
+messages, and verify signatures
+• a private-key, known only to the recipient, used to decrypt messages, and 
+sign (create) signatures
+• is asymmetric because
+• Not the same key
+• those who encrypt messages or verify signatures cannot decrypt messages or 
+create signatures
+
+
+Page 135:
+Public-Key Encryption
+• Everybody can encrypt with the public key
+• Only the recipient can decrypt with the private key
+
+
+Page 136:
+Public-Key Cryptography - Encryption
+
+
+Page 137:
+Encryption steps
+• step1: generate a pair of keys
+• step2: keep the private key / secret key (SK) and distribute the public 
+key (PK) – place PK in a public register or other accessible file
+• step3: Bob encrypts the message with Alice’s PK
+• step4: upon receiving the ciphertext (CT), Alice decrypt CT with SK
+
+
+Page 138:
+An example of key distribution
+SSH key-based client authentication. Source: Peiyue and 
+Yuanyuan 2021.
+1.Peiyue, G. and F. Yuanyuan. 2021. "What Is SSH?" Info-Finder, Huawei, July 
+22. Updated 2021-12-14. Accessed 2023-04-18.
+
+
+Page 139:
+Encryption steps
+• step1: generate a pair of keys
+• step2: keep the private key / secret key (SK) and distribute the public 
+key (PK) – place PK in a public register or other accessible file
+• step3: Bob encrypts the message with Alice’s PK
+• step4: upon receiving the ciphertext (CT), Alice decrypt CT with SK
+
+
+Page 140:
+Public-Key Encryption: Definition
+• Three parts:
+• KeyGen() → PK, SK: Generate a public/private keypair, where PK is the public 
+key, and SK is the private (secret) key
+• Enc(PK, M) → C: Encrypt a plaintext M using public key PK to produce 
+ciphertext C
+• Dec(SK, C) → M: Decrypt a ciphertext C using secret key SK
+• Properties
+• Correctness: Decrypting a ciphertext should result in the message that was 
+originally encrypted
+• Dec(SK, Enc(PK, M)) = M for all PK, SK ← KeyGen() and M
+• Efficiency: Encryption/decryption should be fast
+• Security: 1. Alice (the challenger) just gives Eve (the adversary) the public key, 
+and Eve doesn’t request encryptions. Eve cannot guess out anything; 2. 
+computationally infeasible to recover M with PK and ciphertext
+
+
+Page 141:
+Public-Key Cryptography - Signature
+
+
+Page 142:
+Review
+Private Key
+Public Key
+Signature
+Encryption
+
+
+Page 143:
+Public-Key application
+• can classify uses into 3 categories:
+• encryption/decryption (provide secrecy)
+• digital signatures (provide authentication)
+• key exchange (of session keys)
+• some algorithms are suitable for all uses; others are specific to one
+• Either of the two related keys can be used for encryption, with the 
+other used for decryption
+
+
+Page 144:
+Security of Public Key Schemes
+• Keys used are very large (>512bits) 
+• like private key schemes brute force exhaustive search attack is always 
+theoretically possible 
+• Security relies on a large enough difference in difficulty between easy 
+(en/decrypt) and hard (cryptanalyze) problems
+• more generally the hard problem is known, it’s just made too hard to do in 
+practice 
+• Requires the use of very large numbers, hence is slow compared to 
+private/symmetric key schemes
+
+
+Page 145:
+Public-Key Cryptography Algorithm
+(RSA)
+
+
+Page 146:
+RSA Public-key encryption
+• by Rivest, Shamir & Adleman of MIT in 1977 
+• currently the “work horse” of Internet security
+• most public key infrastructure (PKI) products
+• SSL/TLS: certificates and key-exchange
+• secure e-mail: PGP, Outlook, ….
+• based on exponentiation in a finite (Galois) field over integers modulo a 
+prime 
+• exponentiation takes O((log n)3) operations (easy)
+• security due to cost of factoring large integer numbers 
+• factorization takes O(e log n log log n) operations (hard)
+• uses large integers (eg. 1024 bits)
+
+
+Page 147:
+RSA key setup
+• each user generates a public/private key pair by: 
+• selecting two large primes at random - p, q
+• computing their system modulus n=p!q
+• note ø(n)=(p-1)(q-1)
+• selecting at random the encryption key e
+• where 1<e<ø(n), gcd(e,ø(n))=1 
+• solve following equation to find decryption key d
+• ed=1 mod ø(n)
+• publish their public encryption key: pk={e,n} 
+• keep secret private decryption key: sk={d,p,q} 
+
+
+Page 148:
+
+
+Page 149:
+RSA example
+1.
+Select primes: p=17 & q=11
+2.
+Compute n = pq =17×11=187
+3.
+Compute ø(n)=(p–1)(q-1)=16×10=160
+4.
+Select e : gcd(e,160)=1; choose e=7
+5.
+Determine d: de=1 mod 160 and d < 160 Value is d=23 since 
+23×7=161= 10×160+1
+6.
+Publish public key pk={7,187}
+7.
+Keep secret private key sk={23,17,11}
+
+
+Page 150:
+RSA example
+1.
+Select primes: p=17 & q=11
+2.
+Compute n = pq =17×11=187
+3.
+Compute ø(n)=(p–1)(q-1)=16×10=160
+4.
+Select e : gcd(e,160)=1; choose e=7
+5.
+Determine d: de=1 mod 160 and d < 160 Value is d=23 since 
+23×7=161= 10×160+1
+6.
+Publish public key pk={7,187}
+7.
+Keep secret private key sk={23,17,11}
+
+
+Page 151:
+RSA use
+• to encrypt a message M the sender:
+• obtains public key of recipient pk={e,n}
+• computes: C=Me mod n, where 0≤M<n
+• to decrypt the ciphertext C the owner:
+• uses their private key sk={d,p,q}
+• computes: M=Cd mod n
+• note that the message M must be smaller than the modulus n (block 
+if needed)
+Plaintext
+Ciphertext
+C = 𝑀!
+pk={e,n}
+sk={d,p,q}
+
+
+Page 152:
+RSA example continue
+• sample RSA encryption/decryption is: 
+• given message M = 88 ( 88<187)
+• encryption:
+C = 887 mod 187 = 11
+• decryption:
+M = 1123 mod 187 = 88
+
+
+Page 153:
+Example of RSA algorithm
+
+
+Page 154:
+RSA key generation
+• users of RSA must:
+• determine two primes at random - p, q
+• select either e or d and compute the other
+• primes p,q must not be easily derived from modulus n=p.q
+• means must be sufficiently large
+• typically guess and use probabilistic test
+• exponents e, d are inverses, so use Inverse algorithm to compute the 
+other
+
+
+Page 155:
+Correctness of RSA
+• Euler’s theorem: if gcd (M, n) = 1, then 𝑀!(#) = 1 mod n. Here φ(n) 
+is Euler’s totient function: the number of integers in {1, 2, . . ., n-1} 
+which are relatively prime to n. When n is a prime, this theorem is 
+just Fermat’s little theorem
+M’ = 𝐶% mod n = 𝑀&% mod n
+=  𝑀(! # )* mod n
+=  [𝑀!(#)](, 𝑀 mod n
+= M  mod n
+
+
+Page 156:
+
+
+Page 157:
+Attack approaches
+• Mathematical attacks: several approaches, all equivalent in effort to 
+factoring the product of two primes. The defense against 
+mathematical attacks is to use a large key size. 
+• Timing attacks: These depend on the running time of the decryption 
+algorithm
+• Chosen ciphertext attacks: this type of attacks exploits properties of 
+the RSA algorithm by selecting blocks of data. These attacks can be 
+thwarted by suitable padding of the plaintext, such as PKCS1 V1.5 in 
+SSL
+
+
+Page 158:
+A simple attack on textbook RSA
+• Session-key  K is 64 bits.     View   K Î {0,…,264}
+• Eavesdropper sees:    C = Ke (mod N) .
+• Suppose   K = K1×K2 where   K1, K2 < 234 .   
+• Then:    C/K1
+e = K2
+e (mod N)
+• Build table:   C/1e, C/2e, C/3e, …, C/234e .   time:  234
+For  K2 = 0,…, 234 test if  K2
+e is in table.   time: 234×34
+• Attack time:   »240  << 264
+Web 
+Browser
+Web
+Server
+Random session key K
+d
+Client Hello
+Server Hello (e, N)
+C = RSA (K)
+
+
+Page 159:
+Attack approaches
+• Mathematical attacks: several approaches, all equivalent in effort to 
+factoring the product of two primes. The defense against 
+mathematical attacks is to use a large key size. 
+• Timing attacks: These depend on the running time of the decryption 
+algorithm
+• Chosen ciphertext attacks: this type of attacks exploits properties of 
+the RSA algorithm by selecting blocks of data. These attacks can be 
+thwarted by suitable padding of the plaintext, such as PKCS1 V1.5 in 
+SSL
+
+
+Page 160:
+A simple attack on textbook RSA
+• Session-key  K is 64 bits.     View   K Î {0,…,264}
+• Eavesdropper sees:    C = Ke (mod N) .
+• Suppose   K = K1×K2 where   K1, K2 < 234 .   
+• Then:    C/K1
+e = K2
+e (mod N)
+• Build table:   C/1e, C/2e, C/3e, …, C/234e .   time:  234
+For  K2 = 0,…, 234 test if  K2
+e is in table.   time: 234×34
+• Attack time:   »240  << 264
+Web 
+Browser
+Web
+Server
+Random session key K
+d
+Client Hello
+Server Hello (e, N)
+C = RSA (K)
+
+
+Page 161:
+Take-home exercise – no need to submit 
+• SW textbook (6th edition) problems: 3.14 & 3.15
+
+
+Page 162:
+Homomorphic encryption 
+• Encryption scheme that allows computation on ciphertexts 
+• an extension of public-key encryption scheme that allows anyone in 
+possession of the public key to perform operations on encrypted data without 
+access to the decryption key
+• Partially Homomorphic Encryption: Initial public-key systems that 
+allow this for either addition or multiplication, but not both.
+• i.e. RSA
+• Fully homomorphic encryption (FHE)
+
+
+Page 163:
+Application of homomorphic encryption 
+• One Use case: cloud computing 
+• A weak computational device Alice (e.g., a mobile phone or a laptop) wishes 
+to perform a computationally heavy task, beyond her computational means. 
+She can delegate it to a much stronger (but still feasible) machine Bob (the 
+cloud, or a supercomputer) who offers the service of doing so. The problem is 
+that Alice does not trust Bob, who may give the wrong answer due to laziness, 
+fault, or malice.
+E (Pk, data)
+E (Pk, f(data))
+
+
+Page 164:
+RSA reading materials
+• A Method for Obtaining Digital Signatures and Public-Key 
+Cryptosystems
+
+
+Page 165:
+Message Authentication
+
+
+Page 166:
+Message authentication
+• message authentication is concerned with: 
+• protecting the integrity of a message 
+• validating identity of originator 
+• non-repudiation of origin (dispute resolution)
+• then three alternative functions used:
+• message encryption – symmetric
+• message authentication code (MAC)
+• digital signature
+
+
+Page 167:
+Message encryption
+• Symmetric message encryption by itself also provides a measure of 
+authentication
+• if symmetric encryption is used then:
+• receiver knows sender must have created it
+• since only sender and receiver know key used
+• know content cannot be altered
+
+
+Page 168:
+Homework 1 questions
+• Symmetric Block Cypher provides authentication and confidentiality
+• Ans: True
+
+
+Page 169:
+Message encryption
+• if public-key encryption is used:
+• encryption provides no confidence of sender
+• since anyone potentially knows public-key
+• so, need to recognize corrupted messages
+• however, if 
+• sender signs message using their private-key
+• then encrypts with recipients’ public key
+• have both secrecy and authentication
+• but at cost of two public-key uses on message
+
+
+Page 170:
+Reasons to avoid encryption authentication
+• Encryption software is quite slow
+• Encryption hardware costs are nonnegligible
+• Encryption hardware is optimized toward large data sizes
+• An encryption algorithm may be protected by a patent
+
+
+Page 171:
+Hash Function
+
+
+Page 172:
+Hash functions
+• Hash function: h = H(M)
+• M can be of any size 
+• h is always of fixed size 
+• Typically, h << size(M) 
+
+
+Page 173:
+One use case - using hash function
+• Initialization: A and B share a 
+common secret, SAB
+• Message, M
+• A calculates MDM = H (SAB || M)
+• B recalculates MD’M, and check
+• MD’M = MDM
+
+
+Page 174:
+Requirements for secure hash functions
+• 1. can be applied to any sized message M
+• 2. produces fixed-length output h
+• 3. is easy to compute h=H(M) for any message M
+• 4. given h is infeasible to find x s.t. H(x)=h
+• one-way property or preimage resistance
+• 5. given x is infeasible to find x’ s.t. H(x’)=H(x)
+• weak collision resistance or second pre-image resistant
+• 6. infeasible to find any pair of x,x’ s.t. H(x’)=H(x)
+• strong collision resistance
+
+
+Page 175:
+Hash Function: Collision Resistance
+• Collision: Two different inputs with the same output
+• x ≠ x' and H(x) = H(x')
+• Can we design a hash function with no collisions?
+• No, because there are more inputs than outputs (pigeonhole principle)
+• However, we want to make finding collisions infeasible for an attacker
+• Collision resistance: It is infeasible to (i.e. no polynomial time attacker 
+can) find any pair of inputs x' ≠ x such that H(x) = H(x')
+
+
+Page 176:
+Secure hash function
+• A hash function that satisfies the first five properties is referred to as 
+a weak hash function
+• Security: random/unpredictability, no predictable patterns for how 
+changing the input affects the output
+• Changing 1 bit in the input causes the output to be completely different
+• Also called “random oracle” assumption
+
+
+Page 177:
+Secure hash function
+• A hash function that satisfies the first five properties is referred to as 
+a weak hash function
+• Security: random/unpredictability, no predictable patterns for how 
+changing the input affects the output
+• Changing 1 bit in the input causes the output to be completely different
+• Also called “random oracle” assumption
+• A message digest
+• a cryptographic hash function containing a string of digits created by a one-
+way hashing formula
+• provides data integrity
+• Examples: SHA-1 (Secure Hash Algorithm 1), SHA-2, SHA-3, MD5
+
+
+Page 178:
+Hash Function: Examples
+• MD5
+• Output: 128 bits
+• Security: Completely broken
+• SHA-1
+• Output: 160 bits
+• Security: Completely broken in 2017
+• Was known to be weak before 2017, but still used sometimes
+• SHA-2
+• Output: 256, 384, or 512 bits (sometimes labeled SHA-256, SHA-384, SHA-512)
+• Not currently broken, but some variants are vulnerable to a length extension attack
+• Current standard
+• SHA-3 (Keccak)
+• Output: 256, 384, or 512 bits
+• Current standard (not meant to replace SHA-2, just a different construction)
+
+
+Page 179:
+Length Extension Attacks
+• Length extension attack: Given H(x) and the length of x, but not x, an 
+attacker can create H(x || m) for any m of the attacker’s choosing
+• Length extension attack - Wikipedia
+• SHA-256 (256-bit version of SHA-2) is vulnerable
+• SHA-3 is not vulnerable
+
+
+Page 180:
+Length Extension Attacks
+• Length extension attack: Given H(x) and the length of x, but not x, an 
+attacker can create H(x || m) for any m of the attacker’s choosing
+• Length extension attack - Wikipedia
+• SHA-256 (256-bit version of SHA-2) is vulnerable
+• SHA-3 is not vulnerable
+
+
+Page 181:
+
+
+Page 182:
+Does hashes provide integrity?
+• It depends on your threat model
+• Scenario
+• Mozilla publishes a new version of Firefox on some download servers
+• Alice downloads the program binary
+• How can she be sure that nobody tampered with the program?
+• Idea: use cryptographic hashes
+• Mozilla hashes the program binary and publishes the hash on its website
+• Alice hashes the binary she downloaded and checks that it matches the hash on the website
+• If Alice downloaded a malicious program, the hash would not match (tampering detected!)
+• An attacker can’t create a malicious program with the same hash (collision resistance)
+• Threat model: We assume the attacker cannot modify the hash on the website
+• We have integrity, as long as we can communicate the hash securely
+
+
+Page 183:
+Do hashes provide integrity?
+• It depends on your threat model
+• Scenario
+• Alice and Bob want to communicate over an insecure channel
+• David might tamper with messages
+• Idea: Use cryptographic hashes
+• Alice sends her message with a cryptographic hash over the channel
+• Bob receives the message and computes a hash on the message
+• Bob checks that the hash he computed matches the hash sent by Alice
+• Threat model: David can modify the message and the hash
+• No integrity!
+
+
+Page 184:
+Man-in-the-middle attack
+Alice
+M’
+MD’
+M
+MD
+M
+MD
+M’
+MD’
+Bob
+David
+
+
+Page 185:
+Do hashes provide integrity? 
+• It depends on your threat model
+• If the attacker can modify the hash, hashes don’t provide integrity
+• Main issue: Hashes are unkeyed functions
+• There is no secret key being used as input, so any attacker can compute a 
+hash on any value
+
+
+Page 186:
+Solutions
+• A message digest created using a secret symmetric key is known as a 
+Message Authentication Code (MAC), because it can provide 
+assurance that the message has not been modified
+• The sender can also generate a message digest and then encrypt the 
+digest using the private key of an asymmetric key pair, forming a 
+digital signature. The signature must then be verified by the receiver 
+through comparing it with a locally generated digest
+
+
+Page 187:
+Hashes: Summary
+• Map arbitrary-length input to fixed-length output
+• Output is deterministic
+• Security properties
+• One way: Given an output y, it is infeasible to find any input x such that H(x) = y.
+• Second preimage resistant: Given an input x, it is infeasible to find another input x' ≠ 
+x such that H(x) = H(x').
+• Collision resistant: It is infeasible to find any pair of inputs x' ≠ x such that H(x) = 
+H(x’).
+• Randomized output
+• Some hashes are vulnerable to length extension attacks
+• Hashes don’t provide integrity (unless you can publish the hash securely)
+
+
+Page 188:
+Message Authentication Code
+
+
+Page 189:
+Message authentication code (MAC)
+• generated by an algorithm that creates a small fixed-sized block
+• depending on both message and some key
+• not be reversible
+• MACM = F(KAB, M)
+• appended to message as a signature
+• receiver performs same computation on message and checks it 
+matches the MAC
+• provides assurance that message is unaltered and comes from sender
+
+
+Page 190:
+MACs: Usage
+• Alice wants to send M to Bob, but doesn’t want David to tamper with it
+• Alice sends M and T = MAC(K, M) to Bob
+• Bob receives M and T
+• Bob computes MAC(K, M) and checks that it matches T
+• If the MACs match, Bob is confident the message has not been 
+tampered with (integrity)
+
+
+Page 191:
+MACs: Definition
+• Two parts:
+• KeyGen() → K: Generate a key K
+• MAC(K, M) → T: Generate a tag T for the message M using key K
+• Inputs: A secret key and an arbitrary-length message
+• Output: A fixed-length tag on the message
+• Properties
+• Correctness: Determinism
+• Note: Some more complicated MAC schemes have an additional Verify(K, M, T) function 
+that don’t require determinism, but this is out of scope
+• Efficiency: Computing a MAC should be efficient
+• Security: existentially unforgeable under chosen plaintext attack
+
+
+Page 192:
+Mid-term Exam
+• Nov. 6, 2024 (Wednesday), 12:00 pm – 12:50 pm, in class
+• Closed book, but you're allowed to bring one cheat sheet (1 A4-sized 
+paper)
+• Chapter 1 – 3
+• Will have a review class on Nov. 1st , during class
+
+
+Page 193:
+Existentially unforgeable
+• A secure MAC is existentially unforgeable: without the key, an 
+attacker cannot create a valid tag on a message
+• David cannot generate MAC(K, M') without K
+• David cannot find any M' ≠ M such that MAC(K, M') = MAC(K, M)
+
+
+Page 194:
+Example: HMAC
+• issued as RFC 2104 [1]
+• has been chosen as the mandatory-to-implement MAC for IP Security
+• Used in Transport Layer Security (TLS) and Secure Electronic 
+Transaction (SET)
+[1] “HMAC: Keyed-Hashing for Message Authentication”, RFC 2104, https://datatracker.ietf.org/doc/html/rfc2104
+
+
+Page 195:
+HMAC(K, M)
+• will produce two keys to increase security
+• If key is longer than the desired size, we can hash it first, but be 
+careful with using keys that are too much smaller, they have to have 
+enough randomness in them
+• Output H[(K+ ⊕opad) || H[(K+ ⊕ipad) || M]]
+
+
+Page 196:
+Example: HMAC
+• HMAC(K, M):
+• Output H[(K+ ⊕opad) || H[(K+ ⊕ipad) || M]]
+• Use K to derive two different keys
+• opad (outer pad) is the hard-coded byte 0x5c repeated until it’s the same 
+length as K+
+• ipad (inner pad) is the hard-coded byte 0x36 repeated until it’s the same 
+length as K+
+• As long as opad and ipad are different, you’ll get two different keys
+• For paranoia, the designers chose two very different bit patterns, even though 
+they theoretically need only differ in one bit
+
+
+Page 197:
+HMAC 
+A
+B
+A ⨁B
+0 
+0
+0
+0
+1
+1
+1
+0
+1
+1
+1
+0
+K+ = !H 𝐾 
+𝐾 𝑖𝑠 𝑙𝑎𝑟𝑔𝑒𝑟 𝑡ℎ𝑎𝑛 𝑏𝑙𝑜𝑐𝑘 𝑠𝑖𝑧𝑒
+𝐾 
+𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+ipad = 00110110 , repeat b/8 times
+opad = 01011100, repeat b/8 times
+
+
+Page 198:
+HMAC procedure
+• Step 1: Append zeros to the left end of K to create a b-bit string K+ (e.g., if K 
+is of length 160 bits and b = 512, then K will be appended with 44 zero 
+bytes); 
+• Step 2: XOR (bitwise exclusive-OR) K+ with ipad to produce the b-bit block 
+Si;
+• Step 3: Append M to Si;
+• Step 4: Apply H to the stream generated in step 3; 
+• Step 5: XOR K+ with opad to produce the b-bit block So;
+• Step 6: Append the hash result from step 4 to So;
+• Step 7: Apply H to the stream generated in step 6 and output the result. 
+
+
+Page 199:
+HMAC Properties
+• HMAC(K, M) = H[(K+ ⊕opad) || H((K+ ⊕ipad) || M]]
+• HMAC is a hash function, so it has the properties of the underlying 
+hash too
+• It is collision resistant
+• Given HMAC(K, M), an attacker can’t learn M – one way
+• If the underlying hash is secure, HMAC doesn’t reveal M, but it is still 
+deterministic
+• You can’t verify a tag T if you don’t have K
+• This means that an attacker can’t brute-force the message M without 
+knowing K
+
+
+Page 200:
+MACs: Summary
+• Inputs: a secret key and a message
+• Output: a tag on the message
+• A secure MAC is unforgeable: Even if David can trick Alice into 
+creating MACs for messages that David chooses, David cannot create 
+a valid MAC on a message that she hasn't seen before
+• Example: HMAC(K, M) = H((K+ ⊕opad) || H((K+ ⊕ipad) || M))
+• MACs do not provide confidentiality
+
+
+Page 201:
+Do MACs provide integrity? 
+• Do MACs provide integrity?
+• Yes. An attacker cannot tamper with the message without being detected
+• Do MACs provide authenticity?
+• It depends on your threat model
+• If only two people have the secret key, MACs provide authenticity: it has a 
+valid MAC, and it’s not from me, so it must be from the other person
+• More than one secret key, If a message has a valid MAC, you can be sure it 
+came from someone with the secret key, but you can’t narrow it down to one 
+person
+• Do MACs provide confidentiality?
+
+
+Page 202:
+Authenticated Encryption
+
+
+Page 203:
+Authenticated Encryption: Definition
+• Authenticated encryption (AE): A scheme that simultaneously 
+guarantees confidentiality and integrity (and authenticity, depending 
+on your threat model) on a message
+• Two ways of achieving authenticated encryption:
+• Combine schemes that provide confidentiality with schemes that provide 
+integrity
+• Use a scheme that is designed to provide confidentiality and integrity
+
+
+Page 204:
+Authenticated Encryption: Definition
+• Authenticated encryption (AE): A scheme that simultaneously 
+guarantees confidentiality and integrity (and authenticity, depending 
+on your threat model) on a message
+• Two ways of achieving authenticated encryption:
+• Combine schemes that provide confidentiality with schemes that provide 
+integrity
+• Use a scheme that is designed to provide confidentiality and integrity
+
+
+Page 205:
+Scratchpad: Let’s design it together
+• You can use:
+• An encryption scheme: Enc(K, M) and Dec(K, M)
+• An unforgeable MAC scheme (e.g. HMAC): MAC(K, M)
+• First attempt: Alice sends Enc(K1, M) and MAC(K2, M)
+• Integrity? Yes, attacker can’t tamper with the MAC
+• Confidentiality? No, the MAC is not secure
+• Idea 1: Let’s compute the MAC on the ciphertext instead of the plaintext:
+Enc(K1, M) and MAC(k2, Enc(K1, M))
+• Integrity? Yes, attacker can’t tamper with the MAC
+• Confidentiality? Yes, the MAC might leak info about the ciphertext, but that’s okay
+• Idea 2: Let’s encrypt the MAC too: Enc(K1, M || MAC(K2, M))
+• Integrity? Yes, attacker can’t tamper with the MAC
+• Confidentiality? Yes, everything is encrypted
+
+
+Page 206:
+MAC-then-Encrypt or Encrypt-then-MAC?
+• Method 1: Encrypt-then-MAC
+• First compute Enc(K1, M)
+• Then MAC the ciphertext: MAC(K2, Enc(K1, M))
+• Method 2: MAC-then-encrypt
+• First compute MAC(K2, M)
+• Then encrypt the message and the MAC together: Enc(k1, M || MAC(K2, M))
+• Which is better?
+• In theory, both are secure if applied properly
+• MAC-then-encrypt has a flaw: You don’t know if tampering has occurred until after 
+decrypting
+• Attacker can supply arbitrary tampered input, and you always have to decrypt it
+• Passing attacker-chosen input through the decryption function can cause side-channel leaks
+• Always use encrypt-then-MAC because it’s more robust to mistakes
+
+
+Page 207:
+TLS 1.0 “Lucky 13” Attack
+• TLS: A protocol for sending encrypted and authenticated messages over the 
+Internet
+• TLS 1.0 uses MAC-then-encrypt: Enc(k1, M || MAC(k2, M))
+• The encryption algorithm is AES-CBC
+• The Lucky 13 attack abuses MAC-then-encrypt to read encrypted messages
+• Guess a byte of plaintext and change the ciphertext accordingly
+• The MAC will error, but the time it takes to error is different depending on if the 
+guess is correct
+• Attacker measures how long it takes to error in order to learn information about 
+plaintext
+• TLS will send the message again if the MAC errors, so the attacker can guess 
+repeatedly
+• Takeaways
+• Side channel attack: The algorithm is proved secure, but poor implementation made 
+it vulnerable
+• Always encrypt-then-MAC
+
+
+Page 208:
+Authenticated Encryption: Summary
+• Authenticated encryption: A scheme that simultaneously guarantees 
+confidentiality and integrity (and authenticity) on a message
+• First approach: Combine schemes that provide confidentiality with 
+schemes that provide integrity and authenticity
+• MAC-then-encrypt: Enc(K1, M || MAC(K2, M))
+• Encrypt-then-MAC: MAC(K2, Enc(K1, M))
+• Always use Encrypt-then-MAC because it's more robust to mistakes
+
+
+Page 209:
+Digital Signature
+
+
+Page 210:
+Digital Signatures
+• NIST FIPS PUB 186-4 - the result of a cryptographic transformation of 
+data that, when properly implemented, provides a mechanism for 
+verifying origin authentication, data integrity, and signatory non-
+repudiation
+• Based on asymmetric keys
+
+
+Page 211:
+Digital Signatures
+• Asymmetric cryptography is good because we don’t need to share a 
+secret key
+• Digital signatures are the asymmetric way of providing 
+integrity/authenticity to data
+• Assume that Alice and Bob can communicate public keys without 
+David interfering
+
+
+Page 212:
+Digital Signatures: Definition
+• Three parts:
+• KeyGen() → PK, SK: Generate a public/private keypair, where PK is the verify (public) key, and SK
+is the signing (secret) key
+• Sign(SK, M) → sig: Sign the message M using the signing key SK to produce the signature sig
+• Verify(PK, M, sig) → {0, 1}: Verify the signature sig on message M using the verify key PK and 
+output 1 if valid and 0 if invalid
+• Properties:
+• Correctness: Verification should be successful for a signature generated over any message
+• Verify(PK, M, Sign(SK, M)) = 1 for all PK, SK ← KeyGen() and M
+• Efficiency: Signing/verifying should be fast
+• Security: Same as for MACs except that the attacker also receives PK
+• Namely, no attacker can forge a signature for a message
+
+
+Page 213:
+RSA Signature
+• KeyGen():
+• Randomly pick two large primes, p and q
+• Compute n = pq
+• n is usually between 2048 bits and 4096 bits long
+• Choose e
+• Requirement: e is relatively prime to (p - 1)(q - 1)
+• Requirement: 2 < e < (p - 1)(q - 1)
+• Compute d = e-1 mod (p - 1)(q - 1)
+• Public key: n and e
+• Private key: d
+
+
+Page 214:
+A Short Quiz
+• We will have a short quiz on Wednesday, Oct. 30, in class 
+• A short quiz will cover the materials taught that day. 
+
+
+Page 215:
+RSA Signatures
+• Sign(d, M):
+• Compute H(M)d mod n
+• Verify(e, n, M, sig)
+• Verify that H(M) ≡ sige mod n
+
+
+Page 216:
+RSA Digital Signature Algo
+Step1: Generate a hash value, or message digest, 
+mHash from the message M to be signed 
+Step2: Pad mHash with a constant value padding1 and 
+pseudorandom value salt to form M’ 
+Step3: Generate hash value H from M’
+Step4: Generate a block DB consisting of a constant 
+value padding 2 and salt
+Step5: Use the mask generating function MGF, which 
+produces a randomized out-put from input H of the 
+same length as DB
+Step 6: Create the encoded message (EM) block by 
+padding H with the hexadecimal constant bc and the 
+XOR of DB and output of MGF
+Step 7: Encrypt EM with RSA using the signer’s private 
+key 
+
+
+Page 217:
+RSA Signatures: Correctness
+Theorem: sige ≡ H(M) mod N
+Proof:
+sige = [𝐻𝑀𝑑 ]𝑒 𝑚𝑜𝑑 𝑁
+= 𝐻(𝑀)"# mod N
+
+
+Page 218:
+RSA Signatures: Correctness
+Theorem: sige ≡ H(M) mod N
+Proof:
+sige = [𝐻𝑀𝑑 ]𝑒 𝑚𝑜𝑑 𝑁
+= 𝐻(𝑀)"# mod N
+= 𝐻(𝑀)$% & '(   mod N
+=  [𝐻(𝑀)%(&)]$- 𝐻𝑀 mod N
+= H(M)    mod N
+
+
+Page 219:
+RSA Digital Signature: Security
+• Necessary hardness assumptions:
+• Factoring hardness assumption: Given n large, it is hard to find primes pq = n
+• Discrete logarithm hardness assumption: Given n large, hash, and hashd mod 
+n, it is hard to find d
+• Salt also adds security
+• Even the same message and private key will get different signatures
+
+
+Page 220:
+Hybrid Encryption
+• Issues with public-key encryption
+• Notice: We can only encrypt small messages because of the modulo operator
+• Notice: There is a lot of math, and computers are slow at math
+• Result: We don’t use asymmetric for large messages
+• Hybrid encryption: Encrypt data under a randomly generated key K
+using symmetric encryption, and encrypt K using asymmetric 
+encryption
+• EncAsym(PK, K); EncSym(K, large message)
+• Benefit: Now we can encrypt large amounts of data quickly using symmetric 
+encryption, and we still have the security of asymmetric encryption
+
+
+Page 221:
+Homework (Textbook) – no submission
+• Review Question: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6
+• Problems: 
+• prove correctness of RSA digital signature
+• 3.14 & 3.15
+
+
+Page 222:
+Homework 2 - individual
+• For Chapter 3
+• Deadline Friday, Nov. 1 before class
+• 10% penalty per day for late submission
+
+
+Page 223:
+Thank you!
+
+
+Page 224:
+Network Security
+Chapter 4
+
+
+Page 225:
+Key Distribution
+
+
+Page 226:
+Symmetric Key Distribution and User Authentication
+4.2 
+
+
+Page 227:
+Ways to achieve symmetric key distribution
+• A key could be selected by A and physically delivered to B
+• A third party could select the key and physically deliver it to A and B 
+• If A and B have previously and recently used a key, one party could 
+transmit the new key to the other, using the old key to encrypt the 
+new key 
+• If A and B each have an encrypted connection to a third-party C, C 
+could deliver a key on the encrypted links to A and B 
+
+
+Page 228:
+Terminologies
+• Session key
+• Permanent key
+• key distribution center (KDC) 
+• third party authority, centralized infrastructure
+• give permissions for two parties to communicate
+
+
+Page 229:
+Diffie-Hellman Key Exchange
+Section 3.5
+
+
+Page 230:
+In class quiz on Wednesday
+• We will have a short quiz on Wednesday, Oct. 30, in class
+• A short quiz will cover the materials taught that day.
+• Please be on time for class to avoid missing the quiz questions.
+
+
