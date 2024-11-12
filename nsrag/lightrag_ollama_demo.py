@@ -16,7 +16,7 @@ if not os.path.exists(WORKING_DIR):
 rag = LightRAG(
     working_dir=WORKING_DIR,
     llm_model_func=ollama_model_complete,
-    llm_model_name="llama3.2:1b",
+    llm_model_name="llama3.2:1B",
     llm_model_max_async=4,
     llm_model_max_token_size=32768,
     llm_model_kwargs={"host": "http://localhost:11434", "options": {"num_ctx": 32768}},
@@ -33,9 +33,14 @@ file_path = '/Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/out.txt'
 with open(file_path, 'r') as f:
     rag.insert(f.read())
 
-print(rag.query("Generate 5 multiple-choice quiz questions.Each question should include: the question text, four options and correct answer.", param=QueryParam(mode="hybrid")))
+response = rag.query("Generate 4 multiple-choice quiz questions.Each question should include: the question text, four options and correct answer.", param=QueryParam(mode="naive"))
+print(response)
 
-# print(rag.query("Generate 5 True-False quiz questions.Each question should include: the question text and correct answer.", param=QueryParam(mode="naive")))
+# prompt1 = '''Your answer must be in json format without any additional text other than the answer (in json). It should be well structured so that I can create an api for these responses easily. Based on the information from the documents in the knowledge base, generate 5 multiple-choice quiz questions.Each question should include: the question text, four options and correct answer. Respond only with valid JSON. Do not write an introduction or summary.'''
+# print(rag.query(prompt1, param=QueryParam(mode="naive")))
+
+# prompt2 = '''Your answer must be in json format without any additional text other than the answer (in json). It should be well structured so that I can create an api for these responses easily. Based on the information from the documents in the knowledge base, Generate 5 True-False quiz questions.Each question should include: the question text and correct answer. Respond only with valid JSON. Do not write an introduction or summary.'''
+# print(rag.query(prompt2, param=QueryParam(mode="naive")))
 
 # print(rag.query("Generate 5 MCQ questions on the topic: public key encryption.Each question should include: the question text and correct answer.", param=QueryParam(mode="naive")))
 

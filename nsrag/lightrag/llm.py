@@ -310,18 +310,18 @@ async def ollama_model_if_cache(
     hashing_kv: BaseKVStorage = kwargs.pop("hashing_kv", None)
     messages.extend(history_messages)
     messages.append({"role": "user", "content": prompt})
-    if hashing_kv is not None:
-        args_hash = compute_args_hash(model, messages)
-        if_cache_return = await hashing_kv.get_by_id(args_hash)
-        if if_cache_return is not None:
-            return if_cache_return["return"]
+    # if hashing_kv is not None:
+    #     args_hash = compute_args_hash(model, messages)
+    #     if_cache_return = await hashing_kv.get_by_id(args_hash)
+    #     if if_cache_return is not None:
+    #         return if_cache_return["return"]
 
     response = await ollama_client.chat(model=model, messages=messages, **kwargs)
 
     result = response["message"]["content"]
 
-    if hashing_kv is not None:
-        await hashing_kv.upsert({args_hash: {"return": result, "model": model}})
+    # if hashing_kv is not None:
+    #     await hashing_kv.upsert({args_hash: {"return": result, "model": model}})
 
     return result
 
