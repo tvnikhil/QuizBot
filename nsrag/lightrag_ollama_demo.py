@@ -33,7 +33,7 @@ file_path = '/Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/data/out.txt'
 with open(file_path, 'r') as f:
     rag.insert(f.read())
 
-response = rag.query("Generate 4 multiple-choice quiz questions.Each question should include: the question text, four options and correct answer.", param=QueryParam(mode="naive"))
+response = rag.query("Give content from the text I provided on the topic: public-key encryption", param=QueryParam(mode="local"))
 print(response)
 
 # prompt1 = '''Your answer must be in json format without any additional text other than the answer (in json). It should be well structured so that I can create an api for these responses easily. Based on the information from the documents in the knowledge base, generate 5 multiple-choice quiz questions.Each question should include: the question text, four options and correct answer. Respond only with valid JSON. Do not write an introduction or summary.'''

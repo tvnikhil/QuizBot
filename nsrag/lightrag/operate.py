@@ -441,6 +441,7 @@ async def local_query(
     sys_prompt = sys_prompt_temp.format(
         context_data=context, response_type=query_param.response_type
     )
+    print(context)
     response = await use_model_func(
         query,
         system_prompt=sys_prompt,
@@ -1072,6 +1073,7 @@ async def naive_query(
     section = "--New Chunk--\n".join([c["content"] for c in maybe_trun_chunks])
     if query_param.only_need_context:
         return section
+    print("section", section)
     sys_prompt_temp = PROMPTS["naive_rag_response"]
     sys_prompt = sys_prompt_temp.format(
         content_data=section, response_type=query_param.response_type
