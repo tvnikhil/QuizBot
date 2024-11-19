@@ -1,11 +1,13 @@
 from openai import OpenAI
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from pydantic import BaseModel
 import instructor
 from langchain_community.vectorstores import Chroma
 from get_embedding_function import get_embedding_function
 
 app = Flask(__name__)
+CORS(app)
 
 # enables `response_model` in create call
 client = instructor.from_openai(
