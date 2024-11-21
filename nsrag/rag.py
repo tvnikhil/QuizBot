@@ -7,6 +7,35 @@ from get_embedding_function import get_embedding_function
 
 from prompt_templates import *
 
+import random
+
+# Global list of topics
+TOPICS = [
+    "OSI architecture",
+    "Symmetric Encryption",
+    "Rijndael",
+    "Entropy",
+    "Pseudorandom Number Generator",
+    "Block and Stream Ciphers",
+    "RC4 Stream Cipher",
+    "Public-Key Cryptography",
+    "RSA",
+    "Attack approaches - page 159(merged pdf)",
+    "Homomorphic encryption",
+    "Message authentication - page 166(merged pdf)",
+    "Hash functions and Requirements for secure hash functions",
+    "Secure Hash Function",
+    "Length Extension Attacks",
+    "Message Authentication Code",
+    "HMAC",
+    "Authenticated Encryption",
+    "TLS 1.0 “Lucky 13” Attack",
+    "Digital Signatures",
+    "Hybrid Encryption",
+    "symmetric key distribution",
+    "Diffie-Hellman Key Exchange"
+]
+
 CHROMA_PATH = "chroma"
 
 model = Ollama(model="llama3.2:latest")
@@ -28,7 +57,52 @@ def openQs(que):
     query_rag(que)
 
 def quizMCQ():
-    print("Generating Quiz: ")
+    print("Generating a general MCQ Quiz: ")
+    # Randomly select two topics
+    selected_topics = random.sample(TOPICS, 2)
+    dbQuery = f"Give me a set of multiple-choice questions on {', '.join(selected_topics)}."
+    results = db.similarity_search_with_score(dbQuery, k=7)
+    context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+    
+    prompt_template = ChatPromptTemplate.from_template(QUIZ_MCQ_GENERAL_PROMPT)
+    prompt = prompt_template.format(context=context_text)
+    response_text = model.invoke(prompt)
+    sources = [doc.metadata.get("id", None) for doc, _score in results]
+    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    print(formatted_response)
+
+    askAns = '''\nGive your answers for each question like this: 1. A 2. B 3. C 4. D 5. A\n'''
+    usrAns = input(askAns)
+    eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_MCQ_GENERAL_PROMPT)
+    eval_prompt = eval_prompt_template.format(context=context_text, questions=formatted_response, usrAns=usrAns)
+    response_text = model.invoke(eval_prompt)
+    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    print(formatted_response)
+
+
+def quizTF():
+    print("Generating a general T/F Quiz: ")
+    # Randomly select two topics
+    selected_topics = random.sample(TOPICS, 2)
+    dbQuery = f"Give me a set of true/false questions on {', '.join(selected_topics)}."
+    results = db.similarity_search_with_score(dbQuery, k=7)
+    context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+    
+    prompt_template = ChatPromptTemplate.from_template(QUIZ_TF_GENERAL_PROMPT)
+    prompt = prompt_template.format(context=context_text)
+    response_text = model.invoke(prompt)
+    sources = [doc.metadata.get("id", None) for doc, _score in results]
+    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    print(formatted_response)
+
+    askAns = '''\nGive your answers for each question like this: 1. True 2. False 3. True 4. False 5. True\n'''
+    usrAns = input(askAns)
+    eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_TF_GENERAL_PROMPT)
+    eval_prompt = eval_prompt_template.format(context=context_text, questions=formatted_response, usrAns=usrAns)
+    response_text = model.invoke(eval_prompt)
+    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    print(formatted_response)
+
 
 def quizMCQByTopic(topic):
     print("Generating MCQ Quiz on " + topic)
@@ -95,6 +169,8 @@ if __name__ == "__main__":
         elif option == 3:
             topic = input("On which topic?: ")
             quizMCQByTopic(topic)
+        elif option == 4:
+            quizTF()
         elif option == 5:
             topic = input("On which topic?: ")
             quizTFByTopic(topic)
