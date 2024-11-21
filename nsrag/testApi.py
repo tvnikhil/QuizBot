@@ -4,8 +4,6 @@ from flask_cors import CORS
 from pydantic import BaseModel
 import instructor
 from langchain_community.vectorstores import Chroma
-from get_embedding_function import get_embedding_function
-
 app = Flask(__name__)
 CORS(app)
 
@@ -27,6 +25,12 @@ class MCQArr(BaseModel):
     mcqs: list[MCQ]
 
 CHROMA_PATH = "chroma"
+from langchain_community.embeddings.ollama import OllamaEmbeddings
+import warnings
+warnings.filterwarnings("ignore")
+def get_embedding_function():
+    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    return embeddings
 embedding_function = get_embedding_function()
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
