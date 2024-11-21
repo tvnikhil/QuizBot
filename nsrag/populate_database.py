@@ -7,6 +7,13 @@ from langchain.schema.document import Document
 from get_embedding_function import get_embedding_function
 from langchain.vectorstores.chroma import Chroma
 
+from langchain_community.embeddings.ollama import OllamaEmbeddings
+import warnings
+warnings.filterwarnings("ignore")
+def get_embedding_function():
+    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    return embeddings
+
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data"
