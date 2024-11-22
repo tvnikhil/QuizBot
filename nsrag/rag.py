@@ -7,18 +7,17 @@ warnings.filterwarnings("ignore")
 from prompt_templates import *
 import random
 
-# Global list of topics
 TOPICS = [
     "OSI architecture", "Symmetric Encryption", "Rijndael", "Entropy",
     "Pseudorandom Number Generator", "Block and Stream Ciphers", "RC4 Stream Cipher",
     "Public-Key Cryptography", "RSA", "Attack approaches", "Homomorphic encryption",
     "Message authentication", "Hash functions and Requirements for secure hash functions",
     "Secure Hash Function", "Length Extension Attacks", "Message Authentication Code",
-    "HMAC", "Authenticated Encryption", "TLS 1.0 “Lucky 13” Attack", "Digital Signatures",
+    "HMAC", "Authenticated Encryption", "TLS 1.0 Lucky 13 Attack", "Digital Signatures",
     "Hybrid Encryption", "symmetric key distribution", "Diffie-Hellman Key Exchange"
 ]
 
-CHROMA_PATH = "chroma"
+CHROMA_PATH = "chroma2"
 
 model = Ollama(model="llama3.2:latest")
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=OllamaEmbeddings(model="nomic-embed-text"))
@@ -29,8 +28,8 @@ def get_response_and_sources(query_text, template):
     prompt_template = ChatPromptTemplate.from_template(template)
     prompt = prompt_template.format(context=context_text, question=query_text)
     response_text = model.invoke(prompt)
-    sources = [doc.metadata.get("id", None)[:-4] for doc, _ in results]
-    formatted_response = f"Response: {response_text}\n\n\nSources: {sources}"
+    sources = [doc.metadata.get("id", None)[:-2] for doc, _ in results]
+    formatted_response = f"Response: {response_text}\n\n\nCitations: {sources}"
     return formatted_response, context_text, sources
 
 def open_questions(question):
@@ -47,14 +46,14 @@ def generate_mcq_quiz():
     prompt_template = ChatPromptTemplate.from_template(QUIZ_MCQ_GENERAL_PROMPT)
     prompt = prompt_template.format(context=context_text)
     response_text = model.invoke(prompt)
-    sources = [doc.metadata.get("id", None)[:-4] for doc, _ in results]
-    print(f"Response: {response_text}\n\n\nSources: {sources}")
+    sources = [doc.metadata.get("id", None)[:-2] for doc, _ in results]
+    print(f"Response: {response_text}\n\n\nCitations: {sources}")
 
     user_answers = input("\nGive your answers like this: 1. A 2. B 3. C 4. D 5. A\n")
     eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_MCQ_GENERAL_PROMPT)
     eval_prompt = eval_prompt_template.format(context=context_text, questions=response_text, usrAns=user_answers)
     eval_response = model.invoke(eval_prompt)
-    print(f"Evaluation: {eval_response}\n\n\nSources: {sources}")
+    print(f"Evaluation: {eval_response}\n\n\nCitations: {sources}")
 
 def generate_tf_quiz():
     print("Generating a general T/F Quiz:")
@@ -66,14 +65,14 @@ def generate_tf_quiz():
     prompt_template = ChatPromptTemplate.from_template(QUIZ_TF_GENERAL_PROMPT)
     prompt = prompt_template.format(context=context_text)
     response_text = model.invoke(prompt)
-    sources = [doc.metadata.get("id", None)[:-4] for doc, _ in results]
-    print(f"Response: {response_text}\n\n\nSources: {sources}")
+    sources = [doc.metadata.get("id", None)[:-2] for doc, _ in results]
+    print(f"Response: {response_text}\n\n\nCitations: {sources}")
 
     user_answers = input("\nGive your answers like this: 1. True 2. False 3. True 4. False 5. True\n")
     eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_TF_GENERAL_PROMPT)
     eval_prompt = eval_prompt_template.format(context=context_text, questions=response_text, usrAns=user_answers)
     eval_response = model.invoke(eval_prompt)
-    print(f"Evaluation: {eval_response}\n\n\nSources: {sources}")
+    print(f"Evaluation: {eval_response}\n\n\nCitations: {sources}")
 
 def generate_mcq_quiz_by_topic(topic):
     print(f"Generating MCQ Quiz on {topic}")
@@ -85,7 +84,7 @@ def generate_mcq_quiz_by_topic(topic):
     eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_MCQ_TOPIC_PROMPT)
     eval_prompt = eval_prompt_template.format(context=context_text, questions=response, usrAns=user_answers)
     eval_response = model.invoke(eval_prompt)
-    print(f"Evaluation: {eval_response}\n\n\nSources: {sources}")
+    print(f"Evaluation: {eval_response}\n\n\nCitations: {sources}")
 
 def generate_tf_quiz_by_topic(topic):
     print(f"Generating T/F Quiz on {topic}")
@@ -97,7 +96,7 @@ def generate_tf_quiz_by_topic(topic):
     eval_prompt_template = ChatPromptTemplate.from_template(EVAL_QUIZ_TF_TOPIC_PROMPT)
     eval_prompt = eval_prompt_template.format(context=context_text, questions=response, usrAns=user_answers)
     eval_response = model.invoke(eval_prompt)
-    print(f"Evaluation: {eval_response}\n\n\nSources: {sources}")
+    print(f"Evaluation: {eval_response}\n\n\nCitations: {sources}")
 
 if __name__ == "__main__":
     while True:

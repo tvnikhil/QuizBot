@@ -68,7 +68,7 @@ def generateQuiz():
         
         results = db.similarity_search_with_score("Explain Homomorphic encryption", k=7)
         context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
-        sources = [doc.metadata.get("id", None) for doc, _score in results]
+        sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
         usrPrompt = f'''
         Perform the following task based only on the following context:
 
