@@ -9,17 +9,11 @@ from langchain.vectorstores.chroma import Chroma
 from langchain_community.embeddings.ollama import OllamaEmbeddings
 import warnings
 warnings.filterwarnings("ignore")
-def get_embedding_function():
-    embeddings = OllamaEmbeddings(model="nomic-embed-text")
-    return embeddings
-
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data"
 
-
 def main():
-
     # Check if the database should be cleared (using the --clear flag).
     parser = argparse.ArgumentParser()
     parser.add_argument("--reset", action="store_true", help="Reset the database.")
@@ -33,11 +27,9 @@ def main():
     chunks = split_documents(documents)
     add_to_chroma(chunks)
 
-
 def load_documents():
     document_loader = PyPDFDirectoryLoader(DATA_PATH)
     return document_loader.load()
-
 
 def split_documents(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
@@ -48,11 +40,10 @@ def split_documents(documents: list[Document]):
     )
     return text_splitter.split_documents(documents)
 
-
 def add_to_chroma(chunks: list[Document]):
     # Load the existing database.
     db = Chroma(
-        persist_directory=CHROMA_PATH, embedding_function=get_embedding_function()
+        persist_directory=CHROMA_PATH, embedding_function=OllamaEmbeddings(model="nomic-embed-text")
     )
 
     # Calculate Page IDs.
@@ -76,7 +67,6 @@ def add_to_chroma(chunks: list[Document]):
         db.persist()
     else:
         print("✅ No new documents to add")
-
 
 def calculate_chunk_ids(chunks):
 
@@ -106,11 +96,9 @@ def calculate_chunk_ids(chunks):
 
     return chunks
 
-
 def clear_database():
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
-
 
 if __name__ == "__main__":
     main()
