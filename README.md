@@ -17,8 +17,6 @@ The system architecture is based on a modular design that includes the following
 2. Embedding and Storage Layer
    Vector Database: Store embeddings in chromadb for efficient similarity search and retrieval.
 
-![image](https://github.com/user-attachments/assets/ffb63aac-b76e-44dd-99ba-a6af589a88c2)
-
 3. Query Processing and LLM Layer
    Prompt Engineering: Formulate prompts based on question type (MCQ, True/False, Open-ended).
    LLM (Llama 3.2): Generate responses using local LLM models with relevant context from Faiss.
@@ -26,8 +24,6 @@ The system architecture is based on a modular design that includes the following
 4. User Interface (UI) Layer
    Frontend Development: Simple interactive UI using React and Flask.
    User Interaction: Accepts user input, displays responses, and provides feedback on answer accuracy.
-
-![image](https://github.com/user-attachments/assets/d61d8cb0-5213-441b-8c45-5607c3aa7dd4)
 
 To run the program for generating quiz and true/false questions using your RAG application, follow these clear steps:
 
