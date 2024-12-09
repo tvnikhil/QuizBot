@@ -4,6 +4,8 @@
 
 The Quiz Bot is an interactive educational tool designed to enhance learning in network security. It leverages advanced language models and embedding techniques to generate quizzes based on a curated knowledge base derived from network security lecture slides. The bot supports multiple-choice questions (MCQs), true/false questions, and open-ended questions, providing a comprehensive assessment platform for students.
 
+Full stack app for this project is in development. We are using reactjs for frontend, flask for the backend and chromadb to store vector embeddings. 
+
 ## System Architecture
 
 The system architecture is based on a modular design that includes the following components:
