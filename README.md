@@ -67,45 +67,6 @@ Before running the program, ensure the following:
      bash
      python rag.py
 
-2. _Check the Output:_
-
-   - The program will generate and print the quiz and true/false questions directly in the terminal. Example output:
-
-     Quiz Questions:
-     Question: What is the purpose of public-key encryption?
-
-     1. To encrypt sensitive information
-     2. To decrypt encrypted information
-     3. To authenticate messages
-     4. To secure data in transit
-        Answer: 1
-
-     Question: What is the key characteristic of stream ciphers?
-
-     1. High security
-     2. Low computational complexity
-     3. Statistically random
-     4. Correlation immunity
-        Answer: 2
-
-     True/False Questions:
-     Question: Is NS easy?
-     Answer: True
-
-     Question: Is NS complex?
-     Answer: False
-
-3. _Troubleshoot:_
-   - If you encounter issues, ensure that:
-     - The Ollama service is running and the correct port (11434) is open.
-     - The file paths (WORKING_DIR, file_path) are correct and accessible.
-
-By following these steps, the program should generate and display quiz and true/false questions in the specified plain text format. Let me know if you face any issues!
-
-## Video
-
-A demonstration video of the Quiz Bot can be found https://github.com/Aditya-Bhargav-dev/QuizBot/nsrag/NS sample demo.mov
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
