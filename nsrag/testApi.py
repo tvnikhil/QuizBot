@@ -1,9 +1,15 @@
 from openai import OpenAI
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from pydantic import BaseModel
+from pydanticModels import *
 import instructor
-from langchain_community.vectorstores import Chroma
+from dbInit import getDBInstance
+import warnings
+warnings.filterwarnings("ignore")
+from prompts import *
+from langchain.prompts import ChatPromptTemplate
+
+
 app = Flask(__name__)
 CORS(app)
 
@@ -16,87 +22,64 @@ client = instructor.from_openai(
     mode=instructor.Mode.JSON,
 )
 
-class MCQ(BaseModel):
-    question_text: str
-    options: list[str]
-    correct_answer: str
+db = getDBInstance()
+@app.route('/open_ended', methods=['GET'])
+def generateOpenEndedQuestions():
+    try:
+        results = db.similarity_search_with_score("Explain Kerberos", k=7)
+        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+        sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
+        
+        promptTemplate = ChatPromptTemplate.from_template(OPEN_ENDED_QUESTION_PROMPT)
+        question="Explain Kerberos and why is it used?"
+        prompt = promptTemplate.format(context=context_text, question=question)
+        
+        response = client.chat.completions.create(
+            model="llama3.2:latest",
+            temperature=0.1,
+            messages=[
+                { "role": "system", "content": OPEN_ENDED_SYS_INSTR,},
+                { "role": "user", "content": prompt,}
+            ],
+            response_model=Answer,
+        )
 
-class MCQArr(BaseModel):
-    mcqs: list[MCQ]
-
-CHROMA_PATH = "chroma"
-from langchain_community.embeddings.ollama import OllamaEmbeddings
-import warnings
-warnings.filterwarnings("ignore")
-def get_embedding_function():
-    embeddings = OllamaEmbeddings(model="nomic-embed-text")
-    return embeddings
-embedding_function = get_embedding_function()
-db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
-
-sysIntr = '''
-You are a quiz master and you only output in JSON. 
-You are very good at generating multiple-choice quiz questions.
-Your task is to generate an array of JSON objects where each object represents a question.
-Each question object should have the following structure:
-- "question_text": A string representing the question.
-- "options": An array of exactly 4 string options for the question.
-- "correct_answer": A string that is one of the options from the array and is the correct answer for the question.
-
-The response should strictly follow this JSON structure:
-[
-  {
-    "question_text": "What is the capital of France?",
-    "options": ["Berlin", "Madrid", "Paris", "Rome"],
-    "correct_answer": "Paris"
-  },
-  {
-    "question_text": "Which planet is known as the Red Planet?",
-    "options": ["Earth", "Mars", "Jupiter", "Venus"],
-    "correct_answer": "Mars"
-  }
-]
-
-Generate quiz questions based on the provided context data, ensuring accuracy and diversity.
-'''
-
-import json
+        final_response = {
+            "answer": response.ans,
+            "sources": sources
+        }
+        return jsonify(final_response), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+        
 
 @app.route('/generate_quiz', methods=['GET'])
 def generateQuiz():
     try:
-        
-        results = db.similarity_search_with_score("Explain Homomorphic encryption", k=7)
+        question="Explain Kerberos"
+        results = db.similarity_search_with_score(question, k=7)
         context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
         sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
-        usrPrompt = f'''
-        Perform the following task based only on the following context:
-
-        {context_text}
-
-        ---
-
-        Generate 5 quiz questions from the above context data.'''
         
+        promptTemplate = ChatPromptTemplate.from_template(QUIZ_TOPIC_QUESTION_PROMPT)
+        prompt = promptTemplate.format(context=context_text)
+
         response = client.chat.completions.create(
             model="llama3.2:latest",
             temperature=0.2,
             messages=[
-                { "role": "system", "content": sysIntr,},
-                { "role": "user", "content": usrPrompt,}
+                { "role": "system", "content": QUIZ_TOPIC_SYS_INSTR,},
+                { "role": "user", "content": prompt,}
             ],
             response_model=MCQArr,
         )
-        # print(response.model_dump_json(indent=4))
 
         final_response = {
             "quiz": response.model_dump(),
             "sources": sources
         }
 
-        # Return combined response
         return jsonify(final_response), 200
-        # return jsonify(response.model_dump()), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
