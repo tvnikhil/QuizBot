@@ -17,8 +17,7 @@ TOPICS = [
     "Hybrid Encryption", "symmetric key distribution", "Diffie-Hellman Key Exchange"
 ]
 
-CHROMA_PATH = "chroma2"
-
+CHROMA_PATH = "/Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/backend-fastapi-ms/chroma/chroma1"
 model = Ollama(model="llama3.2:latest")
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=OllamaEmbeddings(model="nomic-embed-text"))
 

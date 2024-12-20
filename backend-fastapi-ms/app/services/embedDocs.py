@@ -3,11 +3,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
 from langchain.vectorstores.chroma import Chroma
 from langchain_community.embeddings.ollama import OllamaEmbeddings
+from config import *
 import warnings
 warnings.filterwarnings("ignore")
-
-CHROMA_PATH = "chroma"
-DATA_PATH = "data"
 
 def split_documents(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(

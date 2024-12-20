@@ -12,10 +12,10 @@ function App() {
     setLoading(true);
     setError(null); // Clear previous errors
     try {
-      const response = await axios.get("http://127.0.0.1:5000/generate_quiz", {
+      const response = await axios.get("http://127.0.0.1:8000/generate_quiz", {
         timeout: 120000, // Set timeout to 2 minutes (120000 ms)
       });
-      setQuiz(response.data); // Set the fetched quiz data
+      setQuiz(response.data.finalResponse); // Set the fetched quiz data
     } catch (err) {
       setError("Failed to fetch quiz. Please try again."); // Handle errors
     } finally {
