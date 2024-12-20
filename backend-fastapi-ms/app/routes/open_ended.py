@@ -3,27 +3,32 @@ from fastapi import APIRouter, Depends
 from config import *
 from dependencies.dependencies import *
 from models.pydanticModels import *
-from prompts.open_ended import *
-from prompts.quiz import *
+from prompts.open_ended_prompt_template import *
 
 import warnings
 warnings.filterwarnings("ignore")
 from langchain.prompts import ChatPromptTemplate
 
+from pydantic import BaseModel
+
+class Query(BaseModel):
+    text: str
+
 router = APIRouter()
 
-@router.get("/open_ended")
+@router.post("/open_ended")
 def generateOpenEndedQuestions(
+    query: Query,
     db=Depends(get_db),
     client=Depends(get_instructor_client),
 ):
     try:
-        results = db.similarity_search_with_score("explain Kerberos", k=7)
+        results = db.similarity_search_with_score(query.text, k=7)
         context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
         sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
         
         promptTemplate = ChatPromptTemplate.from_template(OPEN_ENDED_QUESTION_PROMPT)
-        question="What is Kerberos?"
+        question = f"Answer the following question based on the context: {query.text}"
         prompt = promptTemplate.format(context=context_text, question=question)
         
         response = client.chat.completions.create(
