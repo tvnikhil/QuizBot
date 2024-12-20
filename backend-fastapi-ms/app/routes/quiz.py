@@ -3,22 +3,26 @@ from fastapi import APIRouter, Depends
 from config import *
 from dependencies.dependencies import *
 from models.pydanticModels import *
-from prompts.open_ended import *
-from prompts.quiz import *
+from prompts.quiz_prompt_template import *
 
 import warnings
 warnings.filterwarnings("ignore")
 from langchain.prompts import ChatPromptTemplate
+from pydantic import BaseModel
+
+class Query(BaseModel):
+    topic: str
 
 router = APIRouter()
 
-@router.get("/generate_quiz")
+@router.post("/generate_quiz")
 def generateQuiz(
+    query: Query,
     db=Depends(get_db),
     client=Depends(get_instructor_client),
 ):
     try:
-        question="Explain Kerberos"
+        question=f"Explain {query.topic}"
         results = db.similarity_search_with_score(question, k=7)
         context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
         sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
