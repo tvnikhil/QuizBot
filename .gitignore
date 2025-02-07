@@ -1,5 +1,6 @@
 # Local Netlify folder
 .netlify
+rag
 
 # Python
 __pycache__/
@@ -9,8 +10,6 @@ __pycache__/
 
 # Virtual environments (commonly named .venv, venv, or env)
 .venv/
-venv/
-env/
 
 # Mac files
 .DS_Store
