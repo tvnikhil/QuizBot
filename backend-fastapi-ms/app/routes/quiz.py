@@ -32,7 +32,7 @@ def generateQuiz(
         prompt = promptTemplate.format(context=context_text)
 
         response = client.chat.completions.create(
-            model="llama3.1:latest",
+            model="llama3.2:3b",
             # model="deepseek-r1:8b",
             temperature=0.1,
             messages=[

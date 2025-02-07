@@ -32,7 +32,7 @@ def generateOpenEndedQuestions(
         prompt = promptTemplate.format(context=context_text, question=question)
         
         response = client.chat.completions.create(
-            model="llama3.1:latest",
+            model="llama3.2:3b",
             temperature=0.1,
             messages=[
                 { "role": "system", "content": OPEN_ENDED_SYS_INSTR,},
