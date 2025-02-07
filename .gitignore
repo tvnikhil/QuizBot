@@ -1,6 +1,7 @@
 # Local Netlify folder
 .netlify
 rag
+.vscode
 
 # Python
 __pycache__/
