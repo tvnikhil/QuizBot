@@ -28,11 +28,11 @@ def generateOpenEndedQuestions(
         sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
         
         promptTemplate = ChatPromptTemplate.from_template(OPEN_ENDED_QUESTION_PROMPT)
-        question = f"Answer the following question based on the context: {query.text}"
+        question = f"Answer the following question based on the context: Clearly Explain this + {query.text}"
         prompt = promptTemplate.format(context=context_text, question=question)
         
         response = client.chat.completions.create(
-            model="llama3.2:latest",
+            model="llama3.1:latest",
             temperature=0.1,
             messages=[
                 { "role": "system", "content": OPEN_ENDED_SYS_INSTR,},

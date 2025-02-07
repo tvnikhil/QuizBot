@@ -1,85 +1,239 @@
 import React, { useState } from "react";
-import axios from "axios"; // Import axios
+import axios from "axios";
 import "./App.css";
 
 function App() {
-  const [quiz, setQuiz] = useState(null); // State to store quiz data
-  const [loading, setLoading] = useState(false); // State for loading spinner
-  const [error, setError] = useState(null); // State for error messages
+  const [quiz, setQuiz] = useState(null);
+  const [qa, setQa] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [qaLoading, setQaLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [activeTab, setActiveTab] = useState("quiz");
 
-  // Function to fetch quiz from Flask API
+  // Input states
+  const [quizTopic, setQuizTopic] = useState("");
+  const [qaQuestion, setQaQuestion] = useState("");
+
+  // Store selected answers
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [answerFeedback, setAnswerFeedback] = useState({});
+
+  // Fetch quiz
   const fetchQuiz = async () => {
+    if (!quizTopic) return;
     setLoading(true);
-    setError(null); // Clear previous errors
+    setError(null);
+    setActiveTab("quiz");
+
     try {
-      const response = await axios.get("http://127.0.0.1:8000/generate_quiz", {
-        timeout: 120000, // Set timeout to 2 minutes (120000 ms)
-      });
-      setQuiz(response.data.finalResponse); // Set the fetched quiz data
+      const response = await axios.post(
+        "http://127.0.0.1:8000/generate_quiz",
+        { topic: quizTopic },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      setQuiz(response.data.finalResponse);
+      setSelectedAnswers({});
+      setAnswerFeedback({});
     } catch (err) {
-      setError("Failed to fetch quiz. Please try again."); // Handle errors
+      console.error("Error fetching quiz:", err);
+      setError(err.response?.data?.detail || "Failed to fetch quiz.");
     } finally {
-      setLoading(false); // Stop the spinner
+      setLoading(false);
+    }
+  };
+
+  // Fetch QA
+  const getAnswer = async () => {
+    if (!qaQuestion) return;
+    setQaLoading(true);
+    setError(null);
+    setActiveTab("qa");
+
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/open_ended",
+        { text: qaQuestion },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      setQa(response.data.finalResponse);
+    } catch (err) {
+      console.error("Error fetching answer:", err);
+      setError(err.response?.data?.detail || "Failed to fetch answer.");
+    } finally {
+      setQaLoading(false);
+    }
+  };
+
+  // Handle user selection
+  const handleOptionSelect = (questionIndex, option) => {
+    setSelectedAnswers({
+      ...selectedAnswers,
+      [questionIndex]: option,
+    });
+  };
+
+  // Check if the selected answer is correct
+  const checkAnswer = (questionIndex, correctAnswer) => {
+    const selectedAnswer = selectedAnswers[questionIndex];
+    if (!selectedAnswer) return;
+
+    if (selectedAnswer === correctAnswer) {
+      setAnswerFeedback({
+        ...answerFeedback,
+        [questionIndex]: "✅ Correct!",
+      });
+    } else {
+      setAnswerFeedback({
+        ...answerFeedback,
+        [questionIndex]: `❌ Incorrect! Correct answer: ${correctAnswer}`,
+      });
     }
   };
 
   return (
     <div className="app">
-      <div className="container">
-        <header className="header">
-          <h1>Quiz Generator</h1>
-          <p>Click the button below to generate a quiz!</p>
-        </header>
+      {/* Tab Buttons */}
+      <div className="tab-container">
+        <button
+          className={`tab-button ${activeTab === "quiz" ? "active" : ""}`}
+          onClick={() => setActiveTab("quiz")}
+        >
+          MCQ Quiz
+        </button>
+        <button
+          className={`tab-button ${activeTab === "qa" ? "active" : ""}`}
+          onClick={() => setActiveTab("qa")}
+        >
+          Question-Answer
+        </button>
+      </div>
 
-        <div className="button-section">
+      {/* Quiz Section */}
+      {activeTab === "quiz" && (
+        <div className="quiz-section">
+          <h2>Generate MCQs based on topic</h2>
+          <input
+            type="text"
+            value={quizTopic}
+            onChange={(e) => setQuizTopic(e.target.value)}
+            placeholder="Enter topic for quiz..."
+            className="input-box"
+          />
           <button
-            className="generate-button"
+            className="tab-button"
             onClick={fetchQuiz}
-            disabled={loading}
+            disabled={loading || !quizTopic}
           >
             {loading ? "Loading..." : "Generate Quiz"}
           </button>
-        </div>
 
-        <div className="quiz-section">
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          {quiz ? (
-            <div>
-              <h2>Your Quiz</h2>
+          {error && (
+            <p
+              className="error-text"
+              style={{ color: "#d32f2f", fontWeight: "bold" }}
+            >
+              {error}
+            </p>
+          )}
+
+          {quiz && (
+            <div className="quiz-container">
+              <h3>Quiz Questions</h3>
               <ol>
                 {quiz.quiz.mcqs.map((mcq, index) => (
-                  <li key={index}>
+                  <li key={index} className="quiz-item">
                     <p>
-                      <strong>Q{index + 1}:</strong> {mcq.question_text}
+                      <strong>{mcq.question_text}</strong>
                     </p>
-                    <ul>
+                    {/* Inline styling to remove bullet points */}
+                    <ul
+                      style={{ listStyleType: "none", padding: 0, margin: 0 }}
+                    >
                       {mcq.options.map((option, i) => (
-                        <li key={i}>{option}</li>
+                        <li key={i}>
+                          <label>
+                            <input
+                              type="radio"
+                              name={`question-${index}`}
+                              value={option}
+                              checked={selectedAnswers[index] === option}
+                              onChange={() => handleOptionSelect(index, option)}
+                            />
+                            {option}
+                          </label>
+                        </li>
                       ))}
                     </ul>
-                    <p>
-                      <strong>Correct Answer:</strong> {mcq.correct_answer}
-                    </p>
+                    <br />
+                    <button
+                      className="tab-button"
+                      onClick={() => checkAnswer(index, mcq.correct_answer)}
+                    >
+                      Check Answer
+                    </button>
+                    {answerFeedback[index] && (
+                      <p
+                        className="feedback"
+                        style={{ marginTop: "10px", fontWeight: "bold" }}
+                      >
+                        {answerFeedback[index]}
+                      </p>
+                    )}
                   </li>
                 ))}
               </ol>
-
-              <div className="sources-section">
-                <h3>Sources</h3>
-                <ul>
-                  {quiz.sources.map((source, index) => (
-                    <li key={index}>{source}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
-          ) : (
-            !loading && (
-              <p>Your quiz will appear here after you click the button.</p>
-            )
           )}
         </div>
-      </div>
+      )}
+
+      {/* QA Section */}
+      {activeTab === "qa" && (
+        <div className="qa-section">
+          <h2>Type a topic required for explanation</h2>
+          <input
+            type="text"
+            value={qaQuestion}
+            onChange={(e) => setQaQuestion(e.target.value)}
+            placeholder="Enter your topic..."
+            className="input-box"
+          />
+          <button
+            className="tab-button"
+            onClick={getAnswer}
+            disabled={qaLoading || !qaQuestion}
+          >
+            {qaLoading ? "Loading..." : "Get Answer"}
+          </button>
+
+          {error && (
+            <p
+              className="error-text"
+              style={{ color: "#d32f2f", fontWeight: "bold" }}
+            >
+              {error}
+            </p>
+          )}
+
+          {qa && (
+            <div className="answer-container">
+              <h3>Answer</h3>
+              <p>{qa.answer}</p>
+
+              {qa.sources?.length > 0 && (
+                <div className="sources-container">
+                  <h3>Sources</h3>
+                  <ul>
+                    {qa.sources.map((source, index) => (
+                      <li key={index}>{source}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

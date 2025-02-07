@@ -8,6 +8,7 @@ from prompts.quiz_prompt_template import *
 import warnings
 warnings.filterwarnings("ignore")
 from langchain.prompts import ChatPromptTemplate
+
 from pydantic import BaseModel
 
 class Query(BaseModel):
@@ -31,7 +32,8 @@ def generateQuiz(
         prompt = promptTemplate.format(context=context_text)
 
         response = client.chat.completions.create(
-            model="llama3.2:latest",
+            model="llama3.1:latest",
+            # model="deepseek-r1:8b",
             temperature=0.1,
             messages=[
                 { "role": "system", "content": QUIZ_TOPIC_SYS_INSTR,},
@@ -39,6 +41,8 @@ def generateQuiz(
             ],
             response_model=MCQArr,
         )
+
+        #print(response)
 
         final_response = {
             "quiz": response.model_dump(),

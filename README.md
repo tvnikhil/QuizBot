@@ -20,7 +20,7 @@ The system architecture is based on a modular design that includes the following
    LLM (Llama 3.2:8B): Generate responses using local LLM models with relevant context from Faiss.
 
 4. User Interface (UI) Layer
-   Frontend Development: Simple interactive UI using React and Flask.
+   Frontend Development: Simple interactive UI using React and FastAPI.
    User Interaction: Accepts user input, displays responses, and provides feedback on answer accuracy.
 
 To run the program for generating quiz and true/false questions using your RAG application, follow these clear steps:
