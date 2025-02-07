@@ -1,7 +1,6 @@
 # Local Netlify folder
 .netlify
 rag
-.vscode
 
 # Python
 __pycache__/
@@ -14,3 +13,9 @@ __pycache__/
 
 # Mac files
 .DS_Store
+
+# Ignore .vscode config
+.vscode/
+
+# If you want to ignore all .mov files:
+*.mov
