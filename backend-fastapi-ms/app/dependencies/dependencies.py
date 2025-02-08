@@ -18,5 +18,6 @@ def get_instructor_client():
     )
 
 def get_db():
-    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    # embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url="http://34.174.202.104:11434")
     return Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings)
