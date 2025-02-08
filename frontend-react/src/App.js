@@ -27,9 +27,10 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/generate_quiz",
+        // "/api/generate_quiz",
+        "http://34.174.53.242:8000/generate_quiz",
         { topic: quizTopic },
-        { headers: { "Content-Type": "application/json" } }
+        { headers: { "Content-Type": "application/json" }, timeout: 120000 }
       );
       setQuiz(response.data.finalResponse);
       setSelectedAnswers({});
@@ -51,9 +52,10 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/open_ended",
+        // "/api/open_ended",
+        "http://34.174.53.242:8000/open_ended",
         { text: qaQuestion },
-        { headers: { "Content-Type": "application/json" } }
+        { headers: { "Content-Type": "application/json" }, timeout: 120000 }
       );
       setQa(response.data.finalResponse);
     } catch (err) {

@@ -1,0 +1,2 @@
+/api/open_ended  http://34.174.244.199:8000/open_ended  200!
+/api/generate_quiz  http://34.174.244.199:8000/generate_quiz  200!
