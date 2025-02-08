@@ -1,8 +1,4 @@
 origins = [
-    "http://localhost:3000",
-    "http://localhost:8080",
-    "https://e931-50-26-39-60.ngrok-free.app",
-    "https://serene-sfogliatella-1bfb87.netlify.app/",
     "*"
 ]
 
