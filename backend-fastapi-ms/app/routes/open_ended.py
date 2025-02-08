@@ -9,8 +9,6 @@ import warnings
 warnings.filterwarnings("ignore")
 from langchain.prompts import ChatPromptTemplate
 
-from pydantic import BaseModel
-
 router = APIRouter()
 
 @router.post("/open_ended")
