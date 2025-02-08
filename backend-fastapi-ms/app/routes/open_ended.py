@@ -11,9 +11,6 @@ from langchain.prompts import ChatPromptTemplate
 
 from pydantic import BaseModel
 
-class Query(BaseModel):
-    text: str
-
 router = APIRouter()
 
 @router.post("/open_ended")

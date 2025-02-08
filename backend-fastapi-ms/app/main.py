@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import *
-from routes import open_ended, quiz
+from routes import open_ended, quiz, hello
 
 app = FastAPI()
 
@@ -16,3 +16,4 @@ app.add_middleware(
 
 app.include_router(open_ended.router)
 app.include_router(quiz.router)
+app.include_router(hello.router)

@@ -11,3 +11,6 @@ class MCQArr(BaseModel):
 
 class Answer(BaseModel):
     ans: str
+
+class Query(BaseModel):
+    text: str
