@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
+import "github-markdown-css/github-markdown.css";
 import "./App.css";
 
 function App() {
@@ -29,8 +31,8 @@ function App() {
       const response = await axios.post(
         // "/api/generate_quiz",
         // "http://34.174.53.242:8000/generate_quiz",
-        "http://127.0.0.1:8000/open_ended",
-        { topic: quizTopic },
+        "http://127.0.0.1:8000/generate_quiz",
+        { text: quizTopic },
         { headers: { "Content-Type": "application/json" }, timeout: 120000 }
       );
       setQuiz(response.data.finalResponse);
@@ -222,7 +224,12 @@ function App() {
           {qa && (
             <div className="answer-container">
               <h3>Answer</h3>
-              <p>{qa.answer}</p>
+              <div
+                className="markdown-body"
+                style={{ backgroundColor: "white", color: "black" }}
+              >
+                <ReactMarkdown>{qa.answer}</ReactMarkdown>
+              </div>
 
               {qa.sources?.length > 0 && (
                 <div className="sources-container">

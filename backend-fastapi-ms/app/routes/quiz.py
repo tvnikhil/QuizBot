@@ -36,7 +36,7 @@ def generateQuiz(
             response_model=MCQArr,
         )
 
-        #print(response)
+        # print(response)
 
         final_response = {
             "quiz": response.model_dump(),
