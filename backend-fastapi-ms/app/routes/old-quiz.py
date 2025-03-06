@@ -9,6 +9,11 @@ import warnings
 warnings.filterwarnings("ignore")
 from langchain.prompts import ChatPromptTemplate
 
+from pydantic import BaseModel
+
+class Query(BaseModel):
+    topic: str
+
 router = APIRouter()
 
 @router.post("/generate_quiz")
@@ -18,8 +23,8 @@ def generateQuiz(
     client=Depends(get_instructor_client),
 ):
     try:
-        question=f"Explain {query.text}"
-        results = db.similarity_search_with_score(question, k=10)
+        question=f"Explain {query.topic}"
+        results = db.similarity_search_with_score(question, k=7)
         context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
         sources = [doc.metadata.get("id", None)[:-2] for doc, _score in results]
         
@@ -27,7 +32,8 @@ def generateQuiz(
         prompt = promptTemplate.format(context=context_text)
 
         response = client.chat.completions.create(
-            model="gemini-2.0-flash",
+            model="llama3.2:3b",
+            # model="deepseek-r1:8b",
             temperature=0.1,
             messages=[
                 { "role": "system", "content": QUIZ_TOPIC_SYS_INSTR,},
