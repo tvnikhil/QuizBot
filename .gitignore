@@ -19,3 +19,7 @@ __pycache__/
 
 # If you want to ignore all .mov files:
 *.mov
+
+backend-fastapi-ms/app/secretKeys.py
+backend-fastapi-ms/data/*
+!backend-fastapi-ms/data/.gitkeep
