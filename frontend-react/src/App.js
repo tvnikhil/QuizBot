@@ -31,7 +31,7 @@ function App() {
       const response = await axios.post(
         // "http://127.0.0.1:8000/generate_quiz",
         // "http://34.174.46.79:8000/generate_quiz",
-        "/api/open_ended",
+        "/api/generate_quiz",
         { text: quizTopic },
         { headers: { "Content-Type": "application/json" }, timeout: 120000 }
       );
