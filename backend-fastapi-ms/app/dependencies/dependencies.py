@@ -8,6 +8,7 @@ import warnings
 warnings.filterwarnings("ignore")
 # from config import *
 from secretKeys import *
+import os
 
 API_KEY = api_keys[0]
 import os
@@ -37,5 +38,9 @@ def get_instructor_client():
 #     return Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings)
 
 def get_db():
+    current_dir = os.path.dirname(__file__)
+    backend_dir = os.path.dirname(os.path.dirname(current_dir))
+    chroma_path = os.path.join(backend_dir, "chroma", "chroma-gemini")
+    absolute_chroma_path = os.path.abspath(chroma_path)
     gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
-    return Chroma(persist_directory="/Users/thanikella_nikhil/Projects-Courses/NS/QuizBot/backend-fastapi-ms/chroma/chroma-gemini", embedding_function=gemini_embeddings)
+    return Chroma(persist_directory=absolute_chroma_path, embedding_function=gemini_embeddings)
